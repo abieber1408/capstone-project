@@ -1,6 +1,7 @@
 import GlobalStyle from "../styles";
 import Head from "next/head";
 
+
 export default function App({ Component, pageProps }) {
   return (
     <>
@@ -9,6 +10,8 @@ export default function App({ Component, pageProps }) {
         <title>Capstone Project</title>
       </Head>
       <Component {...pageProps} />
+    
     </>
   );
 }
+
