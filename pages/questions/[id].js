@@ -14,8 +14,8 @@ export default function Questions() {
         <Head>
           <title>Question</title>
         </Head>
-        <h1>Questions</h1>
-        <QuestionCard question=""/>
+        <h1>Question</h1>
+        <QuestionCard question={question.question} />
       </div>
     );
 }
