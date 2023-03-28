@@ -1,14 +1,17 @@
-import Heading from "../components/Heading";
-import Link from "next/link";
 
+import Heading from "../components/Heading";
+import SubjectList from "../components/SubjectList";
 
 
 
 export default function Home() {
   return (
-    
-    <main>
-      <Heading>QuizMe</Heading>
-    </main>
+    <>
+      <Heading>🔷 🔸♦️QuizMe♦️🔸 🔷</Heading>
+      <h1>Subject List:</h1>
+
+    <SubjectList/>
+      </>
   );
+
 }
