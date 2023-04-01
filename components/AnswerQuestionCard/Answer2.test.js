@@ -3,16 +3,21 @@ import { render, fireEvent, screen } from "@testing-library/react";
 
 import { StyledButton } from ".";
 
+
 describe("AnswerQuestion component", () => {
-    it("should call onClick handler when clicked with  answer1", () => {
+    it("should call onClick handler when clicked with answer2", () => {
         const onClick = jest.fn();
-        const answer1 = "answer1";
+        const answer2 = "answer2";
 
-        render(<StyledButton onClick={onClick}>{answer1}</StyledButton>);
+        render(<StyledButton onClick={onClick}>{answer2}</StyledButton>);
 
-        const answer1Button = screen.getByText(answer1);
+        const answer2Button = screen.getByText(answer2);
     
-        fireEvent.click(answer1Button);
+        fireEvent.click(answer2Button);
         expect(onClick).toHaveBeenCalledTimes(1);
     });
 });
+
+
+
+

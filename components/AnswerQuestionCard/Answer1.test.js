@@ -4,18 +4,17 @@
 import { StyledButton } from ".";
 
 describe("AnswerQuestion component", () => {
-    it("should call onClick handler when clicked with  answer2", () => {
+    it("should call onClick handler when clicked with answer1", () => {
         const onClick = jest.fn();
-        const answer2 = "answer2";
+        const answer1 = "answer1";
 
-        render(<StyledButton onClick={onClick}>{answer2}</StyledButton>);
+        render(<StyledButton onClick={onClick}>{answer1}</StyledButton>);
 
-        const answer2Button = screen.getByText(answer2);
+        const answer1Button = screen.getByText(answer1);
     
-        fireEvent.click(answer2Button);
+        fireEvent.click(answer1Button);
         expect(onClick).toHaveBeenCalledTimes(1);
     });
 });
-
 
 

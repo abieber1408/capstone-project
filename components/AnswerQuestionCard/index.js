@@ -10,18 +10,17 @@ export default function AnswerQuestion({ question, answer1, answer2, correctAnsw
   };
   return (
     <>
-    <div>
-      <h2>{question}</h2>
-   </div>
-      <StyledButton onClick={() => handleAnswerClick(answer1)}>{answer1}</StyledButton>
-      
-      <StyledButton onClick={() => handleAnswerClick(answer2)}>{answer2}</StyledButton>
-      { showResult && (<p>{ selectAnswer === correctAnswer ? "Richtig!!" : "Falsch!!"}</p>)}
-      </>
+      <div>
+        <h2> {question}</h2>
+      </div>  
+        <StyledButton onClick={() => handleAnswerClick(answer1)}>{answer1}</StyledButton>
+        <StyledButton onClick={() => handleAnswerClick(answer2)}>{answer2}</StyledButton>
+        { showResult && (<p>{ selectAnswer === correctAnswer ? "Richtig!!" : "Falsch!!"}</p>)}
+    </>
   )
-}
+};
 
-/*const StyledCard = styled.card`
+/*export const StyledCard = styled.card`
    grid-template-columns: 30% 70%;
    gap: 1rem;
    align-items: center;
@@ -33,7 +32,7 @@ export default function AnswerQuestion({ question, answer1, answer2, correctAnsw
 `;*/
 
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
