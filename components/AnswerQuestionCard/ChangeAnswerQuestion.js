@@ -44,9 +44,9 @@ return (
           <div>
             
             {userAnswer === subjects[currentQuestion].correctAnswer ? (
-              <p>Correct!</p>
+              <p>Right!!</p>
             ) : (
-              <p>Incorrect.</p>
+              <p>False!</p>
             )}
             
           </div>
@@ -56,7 +56,7 @@ return (
     {!subjects[currentQuestion] && (
       <div>
         <h2>Quiz Complete!</h2>
-        <button onClick={handleResetQuizClick}>Reset Quiz</button>
+       <button onClick={handleResetQuizClick}>Reset Quiz</button>
       </div>
     )}
   </div>
@@ -75,8 +75,10 @@ export const ButtonNextQuestion = styled.button`
   background-color: #35268c;
   border-radius: 100px;
   color: #efedfa;
-  font-size: 10px;
+  font-size: 15px;
+  font-weight: bold;
   cursor: alias ;
+  float: right;
 
 
 `;
@@ -85,7 +87,7 @@ export const StyledButton = styled.button`
   justify-content: center;
   align-items: center;
   padding: 25px;
-  width: justifycenter;
+  width: 100%;
   max-height: 40px;
   background-color: #F6FEFF;
   border-radius: 15px;
