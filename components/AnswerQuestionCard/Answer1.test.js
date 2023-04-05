@@ -3,7 +3,7 @@
 
 import { StyledButton } from ".";
 
-describe("Quiz component", () => {
+describe("AnswerQuestion component", () => {
     it("should call onClick handler when clicked with answer1", () => {
         const onClick = jest.fn();
         const answer1 = "answer1";
