@@ -12,7 +12,7 @@ export default function  ButtonGrid ( ) {
     return (
     
             <StyledButtonGrid>
-            {[...Array(9)].map((_, index) => (
+            {[...Array(6)].map((_, index) => (
                 <Link key={index} href= {`/question/${index}`}>Question?
             </Link>
             ))}

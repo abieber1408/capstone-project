@@ -34,7 +34,7 @@ return (
     
     {data && (
       <div>
-        <p>{data.question} <ButtonNextQuestion href= "/" as = {Link}>-</ButtonNextQuestion></p>
+        <p>{data.question} <ButtonNextQuestion href= "/" as = {Link}>back</ButtonNextQuestion></p>
        
         <div>
           <StyledButton onClick={() => handleAnswerClick(data.answer1)}>
