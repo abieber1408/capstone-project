@@ -1,23 +1,27 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { subjects } from "../../lib/subjects";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-
-
-export default function Quiz () {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
+export default function Quiz ({data, id}) {
+  const [currentQuestion, setCurrentQuestion] = useState(id);
+ 
   const [showAnswer, setShowAnswer] = useState(false);
   const [userAnswer, setUserAnswer] = useState(null);
-const handleAnswerClick = (answer) => {
+  const router = useRouter();
+  const handleAnswerClick = (answer) => {
   setUserAnswer(answer);
   setShowAnswer(true);
 };
 
-const handleNextQuestionClick = () => {
+/*const handleNextQuestionClick = () => {
   setShowAnswer(false);
   setUserAnswer(null);
-  setCurrentQuestion(currentQuestion<subjects.length-1?  currentQuestion+ 1 : currentQuestion );
-};
+  setCurrentQuestion(currentQuestion < subjects.length - 1 ? currentQuestion + 1 : currentQuestion);
+  router.push(`/question/${currentQuestion}`)
+  console.log(typeof currentQuestion);
+};*/
 
 const handleResetQuizClick = () => {
   setShowAnswer(false);
@@ -28,22 +32,22 @@ const handleResetQuizClick = () => {
 return (
   <div>
     
-    {subjects && (
+    {data && (
       <div>
-        <p>{subjects[currentQuestion].question} <ButtonNextQuestion onClick={handleNextQuestionClick}>+</ButtonNextQuestion></p>
+        <p>{data.question} <ButtonNextQuestion href= "/" as = {Link}>-</ButtonNextQuestion></p>
        
         <div>
-          <StyledButton onClick={() => handleAnswerClick(subjects[currentQuestion].answer1)}>
-            {subjects[currentQuestion].answer1}
+          <StyledButton onClick={() => handleAnswerClick(data.answer1)}>
+            {data.answer1}
           </StyledButton>
-          <StyledButton onClick={() => handleAnswerClick(subjects[currentQuestion].answer2)}>
-            {subjects[currentQuestion].answer2}
+          <StyledButton onClick={() => handleAnswerClick(data.answer2)}>
+            {data.answer2}
           </StyledButton>
         </div>
         {showAnswer && (
           <div>
             
-            {userAnswer === subjects[currentQuestion].correctAnswer ? (
+            {userAnswer === data.correctAnswer ? (
               <p>Right!!</p>
             ) : (
               <p>False!</p>
@@ -79,7 +83,7 @@ export const ButtonNextQuestion = styled.button`
   color: #efedfa;
   font-size: 15px;
   font-weight: bold;
-  cursor: alias ;
+  cursor: w-resize;
   float: right;
 
 

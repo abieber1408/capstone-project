@@ -10,8 +10,9 @@ const Footing = styled.h1`
   bottom: 0;
   width: 100%;
   height: 25px; /* set the height of the footer */
-  background-color: #e4ffd6;
+  background-color: #A060EA;
   text-align: center;
   left: 0;
+  color: #FFFFFF;
 `;
 export default Footing;

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
-import ChangeQuestion from "./ChangeAnswerQuestion";
+
 
 
 
@@ -47,7 +47,7 @@ export const StyledButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 16px;
   width: justify-center;
   max-height: 40px;
   background-color: #F6FEFF;
