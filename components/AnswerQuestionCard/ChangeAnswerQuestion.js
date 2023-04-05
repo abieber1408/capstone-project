@@ -16,7 +16,7 @@ const handleAnswerClick = (answer) => {
 const handleNextQuestionClick = () => {
   setShowAnswer(false);
   setUserAnswer(null);
-  setCurrentQuestion(currentQuestion<subjects.length-1?  currentQuestion+ 1 : currentQuestion );
+  setCurrentQuestion(currentQuestion + 1);
 };
 
 const handleResetQuizClick = () => {
@@ -53,15 +53,12 @@ return (
         )}
       </div>
     )}
-        <section>
-        {currentQuestion === subjects.length - 1 && (
-          <div>
-            <h2>Quiz Complete!</h2>
-            <button onClick={handleResetQuizClick}>Reset Quiz</button>
-          </div>
-        )}
-      </section>
-
+    {!subjects[currentQuestion] && (
+      <div>
+        <h2>Quiz Complete!</h2>
+        <button onClick={handleResetQuizClick}>Reset Quiz</button>
+      </div>
+    )}
   </div>
 );
 };
