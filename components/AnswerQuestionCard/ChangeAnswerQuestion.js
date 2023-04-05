@@ -44,9 +44,9 @@ return (
           <div>
             
             {userAnswer === subjects[currentQuestion].correctAnswer ? (
-              <p>Right!!</p>
+              <p>Correct!</p>
             ) : (
-              <p>False!</p>
+              <p>Incorrect.</p>
             )}
             
           </div>
@@ -61,6 +61,7 @@ return (
           </div>
         )}
       </section>
+
   </div>
 );
 };
@@ -77,10 +78,8 @@ export const ButtonNextQuestion = styled.button`
   background-color: #35268c;
   border-radius: 100px;
   color: #efedfa;
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 10px;
   cursor: alias ;
-  float: right;
 
 
 `;
@@ -89,7 +88,7 @@ export const StyledButton = styled.button`
   justify-content: center;
   align-items: center;
   padding: 25px;
-  width: 100%;
+  width: justifycenter;
   max-height: 40px;
   background-color: #F6FEFF;
   border-radius: 15px;

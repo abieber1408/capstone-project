@@ -4,7 +4,7 @@ import { render, fireEvent, screen } from "@testing-library/react";
 import { StyledButton } from ".";
 
 
-describe("Quiz component", () => {
+describe("AnswerQuestion component", () => {
     it("should call onClick handler when clicked with answer2", () => {
         const onClick = jest.fn();
         const answer2 = "answer2";
