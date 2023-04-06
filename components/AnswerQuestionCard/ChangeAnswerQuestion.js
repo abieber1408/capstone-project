@@ -15,13 +15,6 @@ export default function Quiz ({data, id}) {
   setShowAnswer(true);
 };
 
-/*const handleNextQuestionClick = () => {
-  setShowAnswer(false);
-  setUserAnswer(null);
-  setCurrentQuestion(currentQuestion < subjects.length - 1 ? currentQuestion + 1 : currentQuestion);
-  router.push(`/question/${currentQuestion}`)
-  console.log(typeof currentQuestion);
-};*/
 
 const handleResetQuizClick = () => {
   setShowAnswer(false);
@@ -50,21 +43,19 @@ return (
             {userAnswer === data.correctAnswer ? (
               <p>Right!!</p>
             ) : (
-              <p>False!</p>
+              <p>Incorrect.</p>
             )}
             
           </div>
         )}
       </div>
     )}
-        <section>
-        {currentQuestion === subjects.length - 1 && (
-          <div>
-            <h2>Quiz Complete!</h2>
-            <button onClick={handleResetQuizClick}>Reset Quiz</button>
-          </div>
-        )}
-      </section>
+    {!subjects[currentQuestion] && (
+      <div>
+        <h2>Quiz Complete!</h2>
+        <button onClick={handleResetQuizClick}>Reset Quiz</button>
+      </div>
+    )}
   </div>
 );
 };
@@ -93,7 +84,7 @@ export const StyledButton = styled.button`
   justify-content: center;
   align-items: center;
   padding: 25px;
-  width: 100%;
+  width: justifycenter;
   max-height: 40px;
   background-color: #F6FEFF;
   border-radius: 15px;

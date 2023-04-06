@@ -2,7 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 
 
-
+import Quiz from "./ChangeAnswerQuestion";
 
 
 export default function AnswerQuestion({ question, answer1, answer2, correctAnswer }) {

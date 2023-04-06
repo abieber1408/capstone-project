@@ -1,7 +1,5 @@
-
 import Link from "next/link";
 import styled from "styled-components";
-
 
 export default function  ButtonGrid ( ) {
     const handleButtonClick = (buttonIndex) => {
@@ -9,8 +7,7 @@ export default function  ButtonGrid ( ) {
       console.log(`Button ${buttonIndex + 1} clicked!`);
     };
   
-    return (
-    
+    return ( 
             <StyledButtonGrid>
             {[...Array(6)].map((_, index) => (
                 <Link key={index} href= {`/question/${index}`}>Question?
