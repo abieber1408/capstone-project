@@ -11,10 +11,11 @@ export default createGlobalStyle`
     font-family: system-ui;
     font-weight:   
     display: grid;
-    margin: 0;
     place-items: center;
     min-height: 100vh;
     max-width: 50rem;
+    margin-left:15px;
+    margin-right: 15px;
   }
   h1{
     font-size: 9px;

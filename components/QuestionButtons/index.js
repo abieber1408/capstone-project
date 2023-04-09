@@ -1,19 +1,22 @@
 import Link from "next/link";
 import styled from "styled-components";
+import Footing from "../Footing";
 
-export default function  ButtonGrid ( ) {
+export default function ButtonGrid() {
+
     const handleButtonClick = (buttonIndex) => {
       console.log(`Button ${buttonIndex + 1} clicked!`);
     };
-  
-    return ( 
-            <StyledButtonGrid>
+ 
+  return (
+    <StyledButtonGrid>
             {[...Array(6)].map((_, index) => (
                 <Link key={index} href= {`/question/${index}`}>Question?
             </Link>
             ))}
-            </StyledButtonGrid>
-    );
+        <Footing> Select a button for your question</Footing>
+    </StyledButtonGrid>
+  );
 };
 
 const StyledButtonGrid = styled.div`

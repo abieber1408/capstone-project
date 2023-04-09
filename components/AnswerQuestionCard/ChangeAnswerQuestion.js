@@ -3,23 +3,25 @@ import styled from "styled-components";
 import { subjects } from "../../lib/subjects";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import Footing from "../Footing";
 
 export default function Quiz ({data, id}) {
-  const [currentQuestion, setCurrentQuestion] = useState(id);
+
   const [showAnswer, setShowAnswer] = useState(false);
   const [userAnswer, setUserAnswer] = useState(null);
+  
   const router = useRouter();
 
   const handleAnswerClick = (answer) => {
-  setUserAnswer(answer);
-  setShowAnswer(true);
+    setUserAnswer(answer);
+    setShowAnswer(true);
   };
-  
+
 return (
   <div>
     {data && (
       <div>
-        <p>{data.question} <ButtonNextQuestion href= "/" as = {Link}>back</ButtonNextQuestion></p>
+        <p>{data.question}<ButtonNextQuestion href= "/" as = {Link}>back</ButtonNextQuestion></p>
         <div>
           <StyledButton onClick={() => handleAnswerClick(data.answer1)}>
             {data.answer1}
@@ -39,20 +41,25 @@ return (
         )}
       </div>
     )}
+    <Footing>Select your answer
+    </Footing>
   </div>
+
 );
 };
 
 export const AnswerContainer = styled.div`
-  padding: 3px;
+  padding: 1px;
   margin: 10px;
   right: 5;
   background-color: RGBA(138,156,255,0.51);
-  width: 25%;
+  width: 30%;
   display: flex;
   justify-content: center;
   float: right;
   font-weight: 100;
+  align-items: center;
+  max-height:   50px;
 `;
 
 export const ButtonNextQuestion = styled.button`
@@ -69,6 +76,7 @@ export const ButtonNextQuestion = styled.button`
   font-weight: bold;
   cursor: w-resize;
   float: right;
+  margin-right: 25px;
   text-decoration: none;
 `;
 
@@ -76,7 +84,7 @@ export const StyledButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 25px;
+  padding: 30px;
   width: 93%;
   max-height: 40px;
   background-color: #F6FEFF;
@@ -87,4 +95,7 @@ export const StyledButton = styled.button`
   cursor: help;
   margin-block:10px;
   box-shadow: 5px 5px 0px RGBA(138,156,255,0.51);
+  border-radius: 20px;
+  margin-left: 15px;
+  border:1px
 `;
