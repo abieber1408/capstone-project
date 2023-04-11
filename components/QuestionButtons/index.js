@@ -5,6 +5,7 @@ import { subjects } from "../../lib/subjects"
 import { useState } from "react";
 import Quiz from "../AnswerQuestionCard/ChangeAnswerQuestion";
 import ResultContainer from "../ResultContainer/StyledResultContainer";
+import Image from "next/image";
 
 export function ButtonGrid() {
 
@@ -44,7 +45,6 @@ export function ButtonGrid() {
   let newScore = score();
   let stars = 2;
   const newStarScore = stars * newScore;
-  //const level = openId !== null ? subjects[openId].level : "";
 
   return (
     <>
@@ -53,7 +53,16 @@ export function ButtonGrid() {
         <div>1 </div>
         Score
         <div>{score()} / {questionIds.length}</div>  
-      <div>{newStarScore} </div>
+        <div1 style={{ position: "relative" }}><Image
+                  src={"/images/star.png"}
+                  alt="star"
+                  width={35}
+          height={35} />
+          <div1 style={{ position: "absolute", top:12, left: 14}}>
+    {newStarScore}
+  </div1>
+        </div1>
+       
       </ResultContainer>
 
       <StyledButtonGrid>
@@ -67,7 +76,7 @@ export function ButtonGrid() {
 
 const StyledButtonGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 8fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   padding: 20px;
 
