@@ -10,7 +10,6 @@ export function ButtonGrid() {
 
   const [openId, setOpenId] = useState(null);
   const [answered, setAnswered] = useState([]);
-
   const questionIds = [...Array(7)].map((_, index)=> index);
 
   const handleButtonClick = (id) => {
@@ -41,16 +40,20 @@ export function ButtonGrid() {
   if (openId !== null) {
     return <Quiz data={subjects[openId]} id={openId} onAnswered={onAnswered} onNext={onNext}></Quiz>;
   }
+  
   let newScore = score();
-  let star = 2;
-  const newStarScore = star * newScore;
+  let stars = 2;
+  const newStarScore = stars * newScore;
+  //const level = openId !== null ? subjects[openId].level : "";
 
   return (
     <>
       <ResultContainer>
-      <div>Level</div>
-      <div>{score()} / {questionIds.length}</div>
-      <div>{newStarScore}</div>
+        Level
+        <div>1 </div>
+        Score
+        <div>{score()} / {questionIds.length}</div>  
+      <div>{newStarScore} </div>
       </ResultContainer>
 
       <StyledButtonGrid>
@@ -85,7 +88,6 @@ const StyledButtonGrid = styled.div`
     text-decoration: none;
     transition: all 0.40s ease-in-out;
     
-
     &:hover {
       background-color: #35268c;
       color: #efedfa;

@@ -8,6 +8,7 @@ export default createGlobalStyle`
     font-weight:300;
   }
   body {
+    font-size: 9px;
     margin: 0;
     font-family: system-ui;
     font-weight:   
