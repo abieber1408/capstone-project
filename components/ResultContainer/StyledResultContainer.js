@@ -21,11 +21,6 @@ div {
   div1{
     text-align: center;
     font-size: 10px;
-    position: relative;
-   top: 0;
-   left: 0;
-   
-  
   }
 `;
 export default ResultContainer;

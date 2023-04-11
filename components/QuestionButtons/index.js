@@ -56,11 +56,11 @@ export function ButtonGrid() {
         <div1 style={{ position: "relative" }}><Image
                   src={"/images/star.png"}
                   alt="star"
-                  width={35}
-          height={35} />
-          <div1 style={{ position: "absolute", top:12, left: 14}}>
-    {newStarScore}
-  </div1>
+                  width={45}
+                  height={45} />
+        <div1 style={{ position: "absolute", top:17, left: 19}}>
+         {newStarScore}
+        </div1>
         </div1>
        
       </ResultContainer>
