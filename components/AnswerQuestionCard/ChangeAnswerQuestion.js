@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Footing from "../Footing";
 
-export default function Quiz ({data, id}) {
+export default function Quiz ({data, id, onAnswered, onNext}) {
 
   const [showAnswer, setShowAnswer] = useState(false);
   const [userAnswer, setUserAnswer] = useState(null);
@@ -13,15 +13,20 @@ export default function Quiz ({data, id}) {
   const router = useRouter();
 
   const handleAnswerClick = (answer) => {
+    if (showAnswer) {
+      // Already answered.
+      return;
+    }
     setUserAnswer(answer);
     setShowAnswer(true);
+    onAnswered(id, answer === data.correctAnswer);
   };
 
 return (
   <div>
     {data && (
       <div>
-        <p>{data.question}<ButtonNextQuestion href= "/" as = {Link}>back</ButtonNextQuestion></p>
+        <p>{data.question}<ButtonNextQuestion onClick={onNext}>back</ButtonNextQuestion></p>
         <div>
           <StyledButton onClick={() => handleAnswerClick(data.answer1)}>
             {data.answer1}

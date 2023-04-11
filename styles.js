@@ -5,6 +5,7 @@ export default createGlobalStyle`
   *::before,
   *::after {
     box-sizing: border-box;
+    font-weight:300;
   }
   body {
     margin: 0;
@@ -20,9 +21,7 @@ export default createGlobalStyle`
   h1{
     font-size: 9px;
   }
-  div {
-    font-size: 25px;
-  }
+
   h2{
    font-size: 9px;
   }

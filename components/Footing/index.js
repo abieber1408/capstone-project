@@ -10,7 +10,7 @@ const Footing = styled.h2`
   bottom: 0;
   width: 100%;
   height: 25px; 
-  background-color: #fc9597;
+  background-color: #310f6b;
   text-align: center;
   left: 0;
   color: #FFFFFF;
