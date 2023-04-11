@@ -12,7 +12,7 @@ export default createGlobalStyle`
     margin: 0;
     font-family: system-ui;
     font-weight:   
-    display: grid;
+   
     place-items: center;
     min-height: 100vh;
     max-width: 50rem;

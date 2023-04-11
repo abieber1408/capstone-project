@@ -6,6 +6,7 @@ import { useState } from "react";
 import Quiz from "../AnswerQuestionCard/ChangeAnswerQuestion";
 import ResultContainer from "../ResultContainer/StyledResultContainer";
 import Image from "next/image";
+import StyledTopic from "../Topic/StyledTopic";
 
 export function ButtonGrid() {
 
@@ -48,6 +49,16 @@ export function ButtonGrid() {
 
   return (
     <>
+      <StyledTopic>
+     Topic
+        <div1 style={{ position: "relative" }}><Image
+                  src={"/images/Technology.jpg"}
+                  alt="Technology"
+                  width={75}
+                  height={75} />
+        </div1>
+      </StyledTopic>
+
       <ResultContainer>
         Level
         <div>1 </div>
