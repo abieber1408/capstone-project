@@ -6,12 +6,13 @@ export default createGlobalStyle`
   *::after {
     box-sizing: border-box;
     font-weight:300;
+   
   }
   body {
-    font-size: 9px;
+    font-size: 18px;
     margin: 0;
     font-family: system-ui;
-    font-weight:   
+    font-weight: 300;
    
     place-items: center;
     min-height: 100vh;
@@ -20,14 +21,14 @@ export default createGlobalStyle`
     margin-right: 15px;
   }
   h1{
-    font-size: 9px;
+    font-size: 18px;
   }
 
   h2{
-   font-size: 9px;
+   font-size: 12px;
   }
   p {
     font-style:italic;
-    font-weight:200;
+    font-weight:300;
   }
 `;

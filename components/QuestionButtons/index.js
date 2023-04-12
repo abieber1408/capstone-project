@@ -12,7 +12,7 @@ export function ButtonGrid() {
 
   const [openId, setOpenId] = useState(null);
   const [answered, setAnswered] = useState([]);
-  const questionIds = [...Array(7)].map((_, index)=> index);
+  const questionIds = [...Array(8)].map((_, index)=> index);
 
   const handleButtonClick = (id) => {
     if (alreadyAnswered(id)) {
@@ -50,10 +50,10 @@ export function ButtonGrid() {
   return (
     <>
       <StyledTopic>
-     Topic
+     Tech.
         <div1 style={{ position: "relative" }}><Image
-                  src={"/images/Technology.jpg"}
-                  alt="Technology"
+                  src={"/images/technology.jpg"}
+                  alt="technology"
                   width={75}
                   height={75} />
         </div1>
@@ -77,7 +77,7 @@ export function ButtonGrid() {
       </ResultContainer>
 
       <StyledButtonGrid>
-      {questionIds.map((id) => <a className="question" key={id} onClick={() => handleButtonClick(id)}>click me</a>)}
+      {questionIds.map((id) => <a className="question" key={id} onClick={() => handleButtonClick(id)}>""</a>)}
       </StyledButtonGrid>
       
      <Footing> Select a button for your question</Footing>
@@ -87,7 +87,7 @@ export function ButtonGrid() {
 
 const StyledButtonGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
   padding: 20px;
 
