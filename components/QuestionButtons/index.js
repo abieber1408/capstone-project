@@ -50,6 +50,14 @@ export function ButtonGrid() {
 
   return (
     <>
+      <StyledTopic>
+      Technology
+       <Image
+         src={"/images/technology.jpg"}
+         alt="technology"
+         width={75}
+         height={75} />
+       </StyledTopic>
       <ResultContainer>
         Level
         <div>1 </div>
@@ -60,19 +68,11 @@ export function ButtonGrid() {
           alt="star"
           width={45}
           height={45} />
-        <dl style={{ position: "absolute", top:17, left: 19}}>
-         {newStarScore}
+        <dl style={{ position: "absolute", top:-19, left: 19}}>
+       <h2>{newStarScore}</h2>
         </dl>
         </h1>
       </ResultContainer>
-      <StyledTopic>
-      Technology
-       <Image
-         src={"/images/technology.jpg"}
-         alt="technology"
-         width={75}
-         height={75} />
-       </StyledTopic>
       <StyledButtonGrid>
       {questionIds.map((id) => <a className="question" key={id} onClick={() => handleButtonClick(id)}></a>)}
       </StyledButtonGrid>
@@ -104,12 +104,11 @@ const StyledButtonGrid = styled.div`
     font-weight: 400;
     text-decoration: none;
     transition: all 0.40s ease-in-out;
-  }
     
     &:hover {
       background-color: #35268c;
       color: #efedfa;
       transform: translateY(-2px);
     }
-  
+  }
 `;

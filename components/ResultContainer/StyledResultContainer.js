@@ -17,11 +17,11 @@ div {
     border-radius: 5px;
     align-items: flex-end;
     padding: 3px;
-  
-  }
-  h1{
+}
+  h2{
     text-align: center;
     font-size: 10px;
   }
+
 `;
 export default ResultContainer;
