@@ -4,6 +4,7 @@ const ResultContainer = styled.div`
 display: flex;
 flex-direction: column;
 float: right;
+
 div { 
     margin-top: 20;
     justify-content: center;
@@ -18,7 +19,7 @@ div {
     padding: 3px;
   
   }
-  div1{
+  h1{
     text-align: center;
     font-size: 10px;
   }

@@ -7,7 +7,7 @@ import Quiz from "../AnswerQuestionCard/ChangeAnswerQuestion";
 import ResultContainer from "../ResultContainer/StyledResultContainer";
 import Image from "next/image";
 import StyledTopic from "../Topic/StyledTopic";
-
+import start from "./../../public/images/star.png";
 
 export function ButtonGrid() {
 
@@ -50,55 +50,51 @@ export function ButtonGrid() {
 
   return (
     <>
-      <StyledTopic>
-     Tech.
-        <div1 style={{ position: "relative" }}><Image
-                  src={"/images/technology.jpg"}
-                  alt="technology"
-                  width={75}
-                  height={75} />
-        </div1>
-      </StyledTopic>
-
       <ResultContainer>
         Level
         <div>1 </div>
         Score
         <div>{score()} / {questionIds.length}</div>  
-        <div1 style={{ position: "relative" }}><Image
-                  src={"/images/star.png"}
-                  alt="star"
-                  width={45}
-                  height={45} />
-        <div1 style={{ position: "absolute", top:17, left: 19}}>
+        <h1 style={{ position: "relative" }}><Image
+          src={"/images/star.png"}
+          alt="star"
+          width={45}
+          height={45} />
+        <dl style={{ position: "absolute", top:17, left: 19}}>
          {newStarScore}
-        </div1>
-        </div1>
-       
+        </dl>
+        </h1>
       </ResultContainer>
-
+      <StyledTopic>
+      Technology
+       <Image
+         src={"/images/technology.jpg"}
+         alt="technology"
+         width={75}
+         height={75} />
+       </StyledTopic>
       <StyledButtonGrid>
-      {questionIds.map((id) => <a className="question" key={id} onClick={() => handleButtonClick(id)}>""</a>)}
+      {questionIds.map((id) => <a className="question" key={id} onClick={() => handleButtonClick(id)}></a>)}
       </StyledButtonGrid>
-      
      <Footing> Select a button for your question</Footing>
     </>
   );
 };
 
 const StyledButtonGrid = styled.div`
+
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
+  grid-gap: 20px;
   padding: 20px;
 
   a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 25px;
     width: 100%;
-    max-height: 45px;
+    max-height: 50px;
     background-color: #F6FEFF;
     border-radius: 6px;
     color: #333;
@@ -108,11 +104,12 @@ const StyledButtonGrid = styled.div`
     font-weight: 400;
     text-decoration: none;
     transition: all 0.40s ease-in-out;
+  }
     
     &:hover {
       background-color: #35268c;
       color: #efedfa;
       transform: translateY(-2px);
     }
-  }
+  
 `;

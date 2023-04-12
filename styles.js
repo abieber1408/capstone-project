@@ -9,7 +9,7 @@ export default createGlobalStyle`
    
   }
   body {
-    font-size: 18px;
+    font-size: 15px;
     margin: 0;
     font-family: system-ui;
     font-weight: 300;
@@ -29,6 +29,7 @@ export default createGlobalStyle`
   }
   p {
     font-style:italic;
-    font-weight:300;
+    font-weight:250;
+    font-size: 15px;
   }
 `;
