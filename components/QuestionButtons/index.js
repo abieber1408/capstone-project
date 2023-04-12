@@ -8,6 +8,7 @@ import ResultContainer from "../ResultContainer/StyledResultContainer";
 import Image from "next/image";
 import StyledTopic from "../Topic/StyledTopic";
 
+
 export function ButtonGrid() {
 
   const [openId, setOpenId] = useState(null);
