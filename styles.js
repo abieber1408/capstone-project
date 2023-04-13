@@ -5,11 +5,11 @@ export default createGlobalStyle`
   *::before,
   *::after {
     box-sizing: border-box;
-    font-weight:300;
+    font-weight:400;
    
   }
   body {
-    font-size: 12px;
+    font-size: 15px;
     margin: 0;
     font-family: system-ui;
     font-weight: 300;
