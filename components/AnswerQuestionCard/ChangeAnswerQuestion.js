@@ -23,18 +23,18 @@ export default function Quiz ({data, id, onAnswered, onNext}) {
   };
 
 return (
-  <article>
+  <section>
     {data && (
       <div>
         <p>{data.question}<ButtonNextQuestion onClick={onNext}>back</ButtonNextQuestion></p>
-        <section>
+        <article>
           <StyledButton onClick={() => handleAnswerClick(data.answer1)}>
             {data.answer1}
           </StyledButton>
           <StyledButton onClick={() => handleAnswerClick(data.answer2)}>
             {data.answer2}
           </StyledButton>
-        </section>
+        </article>
         {showAnswer && (
           <AnswerContainer> 
             {userAnswer === data.correctAnswer ? (
@@ -48,7 +48,7 @@ return (
     )}
     <Footing>Select your answer
     </Footing>
-  </article>
+  </section>
 
 );
 };

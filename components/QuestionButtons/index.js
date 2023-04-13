@@ -41,7 +41,7 @@ export function ButtonGrid() {
   const score = () => answered.filter(answer => answer.correct === true).length;
 
   if (openId !== null) {
-    return <Quiz data={subjects[openId]} id={openId} onAnswered={onAnswered} onNext={onNext}></Quiz>;
+    return <Quiz data={subjects[openId]} id={openId} onAnswered={onAnswered} onNext={onNext}/>
   }
   
   let newScore = score();
