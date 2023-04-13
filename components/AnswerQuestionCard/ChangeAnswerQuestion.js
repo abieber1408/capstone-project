@@ -1,69 +1,71 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { subjects } from "../../lib/subjects";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import Footing from "../Footing";
 
+export default function Quiz ({data, id, onAnswered, onNext}) {
 
-
-export default function Quiz () {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
   const [userAnswer, setUserAnswer] = useState(null);
-const handleAnswerClick = (answer) => {
-  setUserAnswer(answer);
-  setShowAnswer(true);
-};
+  
+  const router = useRouter();
 
-const handleNextQuestionClick = () => {
-  setShowAnswer(false);
-  setUserAnswer(null);
-  setCurrentQuestion(currentQuestion + 1);
-};
-
-const handleResetQuizClick = () => {
-  setShowAnswer(false);
-  setUserAnswer(null);
-  setCurrentQuestion(0);
-};
+  const handleAnswerClick = (answer) => {
+    if (showAnswer) {
+      // Already answered.
+      return;
+    }
+    setUserAnswer(answer);
+    setShowAnswer(true);
+    onAnswered(id, answer === data.correctAnswer);
+  };
 
 return (
-  <div>
-    
-    {subjects && (
+  <section>
+    {data && (
       <div>
-        <p>{subjects[currentQuestion].question} <ButtonNextQuestion onClick={handleNextQuestionClick}>+</ButtonNextQuestion></p>
-       
-        <div>
-          <StyledButton onClick={() => handleAnswerClick(subjects[currentQuestion].answer1)}>
-            {subjects[currentQuestion].answer1}
+        <p>{data.question}<ButtonNextQuestion onClick={onNext}>back</ButtonNextQuestion></p>
+        <article>
+          <StyledButton onClick={() => handleAnswerClick(data.answer1)}>
+            {data.answer1}
           </StyledButton>
-          <StyledButton onClick={() => handleAnswerClick(subjects[currentQuestion].answer2)}>
-            {subjects[currentQuestion].answer2}
+          <StyledButton onClick={() => handleAnswerClick(data.answer2)}>
+            {data.answer2}
           </StyledButton>
-        </div>
+        </article>
         {showAnswer && (
-          <div>
-            
-            {userAnswer === subjects[currentQuestion].correctAnswer ? (
-              <p>Correct!</p>
+          <AnswerContainer> 
+            {userAnswer === data.correctAnswer ? (
+              <p>Right!!</p>
             ) : (
-              <p>Incorrect.</p>
+              <p>False!!</p>
             )}
-            
-          </div>
+          </AnswerContainer>
         )}
       </div>
     )}
-    {!subjects[currentQuestion] && (
-      <div>
-        <h2>Quiz Complete!</h2>
-        <button onClick={handleResetQuizClick}>Reset Quiz</button>
-      </div>
-    )}
-  </div>
+    <Footing>Select your answer
+    </Footing>
+  </section>
+
 );
 };
 
-
+export const AnswerContainer = styled.div`
+  padding: 1px;
+  margin: 10px;
+  right: 5;
+  background-color: RGBA(138,156,255,0.51);
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  float: right;
+  font-weight: 100;
+  align-items: center;
+  max-height:   50px;
+`;
 
 export const ButtonNextQuestion = styled.button`
   display: flex;
@@ -71,27 +73,34 @@ export const ButtonNextQuestion = styled.button`
   align-items: center;
   padding: 15px;
   width: justify-center;
-  max-height: 20px;
+  max-height: 40px;
   background-color: #35268c;
   border-radius: 100px;
   color: #efedfa;
-  font-size: 10px;
-  cursor: alias ;
-
-
+  font-size: 5px;
+  font-weight: bold;
+  cursor: w-resize;
+  float: right;
+  margin-right: 25px;
+  text-decoration: none;
 `;
+
 export const StyledButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 25px;
-  width: justifycenter;
+  padding: 30px;
+  width: 93%;
   max-height: 40px;
   background-color: #F6FEFF;
   border-radius: 15px;
   color: #000000;
   font-size: 18px;
+  font-weight: 100;
   cursor: help;
   margin-block:10px;
   box-shadow: 5px 5px 0px RGBA(138,156,255,0.51);
+  border-radius: 20px;
+  margin-left: 15px;
+  border:1px
 `;
