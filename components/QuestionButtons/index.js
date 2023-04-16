@@ -1,19 +1,19 @@
-import Link from "next/link";
 import styled from "styled-components";
 import Footing from "../Footing";
 import { subjects } from "../../lib/subjects"
 import { useState } from "react";
-import Quiz from "../AnswerQuestionCard/ChangeAnswerQuestion";
+import Quiz from "../AnswerQuestionCard/AnswerQuestion";
 import ResultContainer from "../ResultContainer/StyledResultContainer";
 import Image from "next/image";
 import StyledTopic from "../Topic/StyledTopic";
-import start from "./../../public/images/star.png";
+
+
 
 export function ButtonGrid() {
 
   const [openId, setOpenId] = useState(null);
   const [answered, setAnswered] = useState([]);
-  const questionIds = [...Array(8)].map((_, index)=> index);
+  const questionIds = [...Array(20)].map((_, index)=> index);
 
   const handleButtonClick = (id) => {
     if (alreadyAnswered(id)) {
@@ -76,6 +76,7 @@ export function ButtonGrid() {
       <StyledButtonGrid>
       {questionIds.map((id) => <a className="question" key={id} onClick={() => handleButtonClick(id)}></a>)}
       </StyledButtonGrid>
+      
      <Footing> Select a button for your question</Footing>
     </>
   );
@@ -95,12 +96,12 @@ const StyledButtonGrid = styled.div`
     padding: 25px;
     width: 100%;
     max-height: 50px;
-    background-color: #F6FEFF;
+    background-color: #acccfc;
     border-radius: 6px;
     color: #333;
     font-size: 8px;
     margin-block:5px;
-    box-shadow: 5px 5px 0px RGBA(138,156,255,0.51);
+    box-shadow: 5px 5px 0px RGBA(199,176,230,0.7);
     font-weight: 400;
     text-decoration: none;
     transition: all 0.40s ease-in-out;

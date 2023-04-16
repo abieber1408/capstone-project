@@ -9,11 +9,11 @@ const Footing = styled.h2`
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 25px; 
-  background-color: #310f6b;
+  height: 20px; 
+  background-color: #35268c;
   text-align: center;
-  left: 0;
   color: #FFFFFF;
-  font-weight: 300;
+  font-weight: 100;
+  font-size:20px;
 `;
 export default Footing;

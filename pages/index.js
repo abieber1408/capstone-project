@@ -1,15 +1,18 @@
-
-import AnswerQuestion from "../components/AnswerQuestionCard";
 import Heading from "../components/Heading";
 import Footing from "../components/Footing";
-import {ButtonGrid} from "../components/QuestionButtons/index";
+
+import { StartForm } from "../components/StartForm/index.js";
+import ContinueButton from "../components/ContinueButton";
 
 export default function Home() {
   
   return (
-    <><Heading>LOGO</Heading> 
-      <Footing>QuizMe-Play and Learn</Footing>
-      <ButtonGrid/>
-    </>
+    <>
+      <StartForm></StartForm>
+      <ContinueButton text="Questions" href="./ButtonGrid" />
+    
+</>
   );
 }
+
+
