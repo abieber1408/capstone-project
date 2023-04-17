@@ -10,7 +10,6 @@ export default function StartButton() {
 
 export const Button = styled.button`
   display: flex;
-  margin-left: -82px;
   justify-content: center;
   align-items: center;
   padding: 45px;
@@ -20,6 +19,6 @@ export const Button = styled.button`
   color: #efedfa;
   font-size: 15px;
   cursor: alias ;
-  margin-top:2vh;
+  margin-top:8vh;
   width: 29vw;
 `;

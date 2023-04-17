@@ -19,19 +19,18 @@ export default function LevelForm() {
 
 export const StyledLevelLabel = styled.label`
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   font-weight: bold;
   height: 30px;
-  width: 75%;
+  width: 80%;
   borde-radius: 100px;
   margin-bottom: 0px;
-  margin-left: 68vw;
-
-
+  margin-left: 58vw;
+   margin-top:-21vh;
 
   select, option {
     border-radius: 0.7rem;
-    width:52%;
+    width:62%;
     font-size: 18px;
     height: 40px;
   }

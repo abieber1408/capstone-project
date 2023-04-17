@@ -56,21 +56,21 @@ export const SubmitButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  max-height: 55px;
+  max-height: 80px;
   background-color: #35268c;
   border-radius: 100px;
   color: #efedfa;
   font-size: 15px;
   cursor: alias ;
-  width: 15vw;
+  width: 18vw;
   height: 70px;
   margin-left:110vw;
   gap: 0.7rem;
   text-decoration: none;
-  margin-top:-10vh;
+  margin-top:-11vh;
   font-size:9px;
   text-decoration: none;
-  padding: 10px;
+  padding: 20px;
   `;
 
  export const Button = styled.button`

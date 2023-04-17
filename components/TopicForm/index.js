@@ -27,24 +27,18 @@ export default function TopicForm () {
            <option value="education">Education</option>
            </select>
         </StyledFormLabel>
-        <StyledImage src={imageSrc} alt={topic} width={200} height={75} />
+        <StyledImage src={imageSrc} alt={topic} width={120} height={80} />
         
    </>
   );
 };
 
 
-export const StyledTopic = styled.div`
-display: flex;
-flex-direction: column;
-float:left;
-`;
-
 
 export const StyledImage = styled.img`
 display: flex;
-margin-top: 50px;
-
+margin-top: 30px;
+margin-left: 8vw;
 `;
 
 export const StyledFormLabel = styled.label`
@@ -55,22 +49,15 @@ export const StyledFormLabel = styled.label`
   width: 100%;
   borde-radius: 100px;
   margin-bottom: 5px;
-  float: left;  
-  margin-left: 5vw;
-  margin-top:-12vh;
+  margin-left: 6vw;
+  margin-top:-8vh;
 
   select, option {
-    height: 30px;
     border-radius: 0.7rem;
-  
     font-size: 18px;
     height: 40px;
   }
 `;
-
-
-
-
 
 export const option = styled.option`
 background-color.  #d4d9ff ;`

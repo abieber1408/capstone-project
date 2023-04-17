@@ -22,7 +22,7 @@ export const StyledButton = styled.button`
   cursor: alias ;
   width: 40%;
   margin-botton:30vh;
-  margin-left: 5vw;
-  margin-top: 4vh;
+  margin-left: 15vw;
+  margin-top: 3vh;
   text-align: center;
 `;
