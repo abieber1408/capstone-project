@@ -51,11 +51,11 @@ export function ButtonGrid() {
   return (
     <>
       <StyledTopic>
-      Technology
+      Art
       </StyledTopic>
        <StyledImage
-         src={"/images/technology.jpg"}
-         alt="technology"
+         src={"/images/art.jpg"}
+         alt="art"
          width={75}
          height={75} />
       <ResultContainer>
@@ -122,7 +122,7 @@ flex-direction: row;
 margin-top:6vh;
 justify-content: center;
 align-items: center;
-width: 75%;
-margin-left: 10px;
+width: 50%;
+margin-left: 25px;
 position: fixed;
 `;

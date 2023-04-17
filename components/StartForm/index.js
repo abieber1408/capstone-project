@@ -1,3 +1,4 @@
+import { useState } from "react";
 import LevelForm from "../LevelForm";
 import PlayerNameForm from "../PlayerForm";
 import TopicForm from "../TopicForm";
@@ -22,7 +23,6 @@ import Footing from "../Footing";
 };*/
 
 
-import { useState } from 'react';
 
 export function StartForm() {
     const [name, setName] = useState('');
@@ -46,4 +46,4 @@ export function StartForm() {
             <Footing>play and learn</Footing>
         </>
     )
-};//
+};

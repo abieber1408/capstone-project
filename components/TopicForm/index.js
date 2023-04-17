@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { useState } from "react";
+import { useState } from "react"
+
 
 export default function TopicForm () {
   const [topic, setTopic] = useState("");
@@ -13,7 +14,7 @@ export default function TopicForm () {
     return (
    <>
         <StyledFormLabel>
-            <select id="select-topic" name="select-topic">
+            <select id="select-topic" name="select-topic" onChange={handleTopicChange}>
             <option value="">Topic:</option>
             <option value="chemistry">Chemistry</option>
             <option value="technology">Technology</option>
@@ -27,7 +28,7 @@ export default function TopicForm () {
            <option value="education">Education</option>
            </select>
         </StyledFormLabel>
-        <StyledImage src={imageSrc} alt={topic} width={120} height={80} />
+        {imageSrc && <StyledImage src={imageSrc} alt={topic} width={120} height={80} />}
         
    </>
   );
