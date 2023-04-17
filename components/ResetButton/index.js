@@ -13,7 +13,6 @@ export default function ResetButton() {
 export const StyledButton = styled.button`
   display: flex;
   justify-content: center;
-  
   padding: 45px;
   max-height: 20px;
   background-color: #35268c;

@@ -17,21 +17,21 @@ export default function LevelForm() {
   );
 }
 
-export const StyledLevelLabel= styled.label`
+export const StyledLevelLabel = styled.label`
+  display: flex;
   flex-direction: row;
   font-weight: bold;
   height: 30px;
-  width: 30%;
+  width: 75%;
   borde-radius: 100px;
   margin-bottom: 0px;
-  float: right;  
-  margin-top:-4vh;
-  margin-right: 2vw;
+  margin-left: 68vw;
+
+
 
   select, option {
-    height: 30px;
     border-radius: 0.7rem;
-    width:100%;
+    width:52%;
     font-size: 18px;
     height: 40px;
   }

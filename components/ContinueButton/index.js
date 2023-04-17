@@ -9,6 +9,7 @@ export default function ContinueButton({text, href}) {
   }
 
 export const StyledLink = styled(Link)`
+display: flex;
 flex-direction: row;
   justify-content: center;
   padding: 45px;

@@ -68,13 +68,13 @@ export function ButtonGrid() {
           alt="star"
           width={45}
           height={45} />
-        <dl style={{ position: "absolute", top:-19, left: 19}}>
+        <dl style={{ position: "absolute", top:-30, left: 19}}>
        <h2>{newStarScore}</h2>
         </dl>
         </h1>
       </ResultContainer>
       <StyledButtonGrid>
-      {questionIds.map((id) => <a className="question" key={id} onClick={() => handleButtonClick(id)}></a>)}
+        {questionIds.map((id) => <a className="question" key={id} onClick={() => handleButtonClick(id)}>{ id }</a>)}
       </StyledButtonGrid>
       
      <Footing> Select a button for your question</Footing>
@@ -83,11 +83,11 @@ export function ButtonGrid() {
 };
 
 const StyledButtonGrid = styled.div`
-
+  display: flex;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
-  padding: 20px;
+  padding: 100px;
 
   a {
     display: flex;
@@ -95,12 +95,12 @@ const StyledButtonGrid = styled.div`
     align-items: center;
     padding: 25px;
     width: 100%;
-    max-height: 50px;
+    max-height: 70px;
     background-color: #acccfc;
     border-radius: 6px;
     color: #333;
     font-size: 8px;
-    margin-block:5px;
+    margin-block:10px;
     box-shadow: 5px 5px 0px RGBA(199,176,230,0.7);
     font-weight: 400;
     text-decoration: none;

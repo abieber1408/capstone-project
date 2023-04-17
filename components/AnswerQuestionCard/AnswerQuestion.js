@@ -1,7 +1,5 @@
 import { useState } from "react";
 import styled from "styled-components";
-
-
 import { useRouter } from "next/router";
 import Footing from "../Footing";
 
@@ -54,6 +52,7 @@ return (
 };
 
 export const AnswerContainer = styled.div`
+  display: flex;
   padding: 1px;
   margin: 10px;
   right: 5;

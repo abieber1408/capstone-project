@@ -9,12 +9,13 @@ const Heading = styled.h1`
   margin-top: auto; 
   margin-bottom: 1rem;
   position: fixed;
-  width: 100%;
-  height: 110px; 
+  width:141%;
+  height: 120px; 
   background-color: #35268c;
   text-align: center;
   color: #FFFFFF;
   font-weight: 1000;
   top: 0;
+  position: absolute;
 `;
 export default Heading;
