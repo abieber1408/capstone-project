@@ -1,7 +1,5 @@
 import { useState } from "react";	
 import styled from "styled-components";	
-import { subjects } from "../../lib/subjects";	
-import Link from "next/link";	
 import { useRouter } from "next/router";	
 import Footing from "../Footing";	
 
@@ -15,6 +13,7 @@ export default function Quiz ({data, id, onAnswered, onNext}) {
   const handleAnswerClick = (answer) => {	
     if (showAnswer) {	
       // Already answered.	
+    
       return;	
     }	
     setUserAnswer(answer);	

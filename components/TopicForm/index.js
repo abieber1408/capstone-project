@@ -25,7 +25,10 @@ export default function TopicForm () {
             <option value="biology">Biology</option>
             <option value="journalism">Journalism</option>
             <option value="physics">Physics</option>
-           <option value="education">Education</option>
+            <option value="education">Education</option>
+            <option value="math">Math</option>
+            <option value="fish">Fish</option>
+            <option value="sun">Sun</option>
            </select>
         </StyledFormLabel>
         {imageSrc && <StyledImage src={imageSrc} alt={topic} width={120} height={80} />}
