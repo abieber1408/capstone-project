@@ -20,7 +20,8 @@ export default function Quiz ({data, id, onAnswered, onNext}) {
     onAnswered(id, answer === data.correctAnswer);
   };
 
-return (
+  return (
+  <StyledSection>
   <section>
     {data && (
       <div>
@@ -47,10 +48,13 @@ return (
     <Footing>Select your answer
     </Footing>
   </section>
-
+  </StyledSection>
 );
 };
-
+export const StyledSection = styled.section`
+margin-top: 50px;
+margin-left: 15px;
+`;
 export const AnswerContainer = styled.div`
   display: flex;
   padding: 1px;
@@ -63,25 +67,25 @@ export const AnswerContainer = styled.div`
   float: right;
   font-weight: 100;
   align-items: center;
-  max-height:   50px;
+  max-height:   75px;
 `;
 
 export const ButtonNextQuestion = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 30px;
   width: justify-center;
-  max-height: 40px;
+  max-height: 50px;
   background-color:#35268c;
   border-radius: 100px;
   color: #efedfa;
   font-size: 5px;
   font-weight: bold;
   cursor: w-resize;
-  float: right;
-  margin-right: 25px;
+  margin-left: 280px;
   text-decoration: none;
+  width: 18vw;
 `;
 
 export const StyledButton = styled.button`

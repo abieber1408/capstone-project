@@ -4,9 +4,11 @@ const ResultContainer = styled.div`
 display: flex;
 flex-direction: column;
 float: right;
-
+position: fixed;
+margin-left: 310px;
+margin-top: 5vh;
 div { 
-    margin-top: 20;
+    margin-top: 50;
     justify-content: center;
     height: 30px;
     text-align: center;

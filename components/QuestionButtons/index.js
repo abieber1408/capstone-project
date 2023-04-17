@@ -52,12 +52,12 @@ export function ButtonGrid() {
     <>
       <StyledTopic>
       Technology
-       <Image
+      </StyledTopic>
+       <StyledImage
          src={"/images/technology.jpg"}
          alt="technology"
          width={75}
          height={75} />
-       </StyledTopic>
       <ResultContainer>
         Level
         <div>1 </div>
@@ -74,7 +74,7 @@ export function ButtonGrid() {
         </h1>
       </ResultContainer>
       <StyledButtonGrid>
-        {questionIds.map((id) => <a className="question" key={id} onClick={() => handleButtonClick(id)}>{ id }</a>)}
+        {questionIds.map((id) => <a className="question" key={id} onClick={() => handleButtonClick(id)}>{id}</a>)}
       </StyledButtonGrid>
       
      <Footing> Select a button for your question</Footing>
@@ -85,31 +85,44 @@ export function ButtonGrid() {
 const StyledButtonGrid = styled.div`
   display: flex;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
   padding: 100px;
+
 
   a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 25px;
-    width: 100%;
-    max-height: 70px;
+    padding: 10px;
+    width:150%;
+    max-height: 100px;
     background-color: #acccfc;
     border-radius: 6px;
     color: #333;
     font-size: 8px;
-    margin-block:10px;
+    margin-block:0px;
     box-shadow: 5px 5px 0px RGBA(199,176,230,0.7);
     font-weight: 400;
     text-decoration: none;
     transition: all 0.40s ease-in-out;
-    
+    margin-top: 35px;
+    margin-left: -75px;
     &:hover {
       background-color: #35268c;
       color: #efedfa;
       transform: translateY(-2px);
     }
   }
+`;
+
+const StyledImage = styled.img`
+display: flex;
+flex-direction: row;
+margin-top:6vh;
+justify-content: center;
+align-items: center;
+width: 75%;
+margin-left: 10px;
+position: fixed;
 `;
