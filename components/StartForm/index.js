@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import LevelForm from "../LevelForm";
 import PlayerNameForm from "../PlayerForm";
 import TopicForm from "../TopicForm";
@@ -6,6 +6,7 @@ import ResetButton from "../ResetButton";
 import VideoStream from "../VideoStream";
 import Heading from "../Heading";
 import Footing from "../Footing";
+import React from "react";
 
 /*export function StartForm() {
     
@@ -24,26 +25,28 @@ import Footing from "../Footing";
 
 
 
-export function StartForm() {
-    const [name, setName] = useState('');
-    const [topic, setTopic] = useState('');
-    const [level, setLevel] = useState('');
+export function StartForm( { onTopicChange, topic, imageSrc} ) {
+    const [name, setName] = useState("");
+  
+    const [level, setLevel] = useState("");
+  
 
     const resetForm = () => {
-        setName('');
-        setTopic('');
-        setLevel('');
+        setName("");
+      
+        setLevel("");
+     
     };
 
     return (
         <>
-            <Heading>QUIZme</Heading>
-            <PlayerNameForm value={name} onChange={setName}>Name</PlayerNameForm>
-            <TopicForm value={topic} onChange={setTopic}>Topic</TopicForm>
-            <LevelForm value={level} onChange={setLevel}>Level</LevelForm>
-            <VideoStream></VideoStream>
-            <ResetButton onClick={resetForm}></ResetButton>
-            <Footing>play and learn</Footing>
-        </>
-    )
+        <Heading>QUIZme</Heading>
+        <PlayerNameForm value={name} onChange={setName}>Name</PlayerNameForm>
+        <TopicForm onTopicChange={onTopicChange} t imageSrc={imageSrc} >Topic</TopicForm>
+        <LevelForm value={level} onChange={setLevel}>Level</LevelForm>
+        <VideoStream></VideoStream>
+        <ResetButton onClick={resetForm}>Reset</ResetButton>
+        <Footing>play and learn</Footing>
+    </>
+)
 };

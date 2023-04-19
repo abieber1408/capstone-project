@@ -13,10 +13,11 @@ export default function PlayerNameForm () {
 
     return (
       <StyledForm onSubmit={handlePlayerNameSubmit}>
-        <Label htmlFor="playerName">Name</Label>
+        <Label htmlFor="playerName"></Label>
         <Input
           id="playerName"
           name="playerName"
+          placeholder= "Name:"
           type="text"
           aria-label="Player name"
           required
@@ -31,9 +32,9 @@ export const StyledForm = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 110vw;
+  width: 100vw;
   margin-left: 5vw;
-  margin-top: 20vh;
+  margin-top: 14vh;
   gap: 0.8rem;
   padding-bottom: 5rem;
   color: var(--white);
@@ -42,15 +43,17 @@ export const Label = styled.label`
 display: flex;
   font-weight: bold;
   font-size: 18px;
-  height: 2px;
+  height:-20px;
   margin-bottom:10px;
+  
 `;
 export const Input = styled.input`
 display: flex;
-  height: 50px;
+  height: 35px;
   border-radius: 0.7rem;
-  width: 90%;
-  font-size: 18px;
+  width: 78%;
+  font-size: 19px;
+ color: black;
 `;
 export const SubmitButton = styled.button` 
   display: flex;
@@ -62,12 +65,12 @@ export const SubmitButton = styled.button`
   color: #efedfa;
   font-size: 15px;
   cursor: alias ;
-  width: 18vw;
-  height: 70px;
-  margin-left:110vw;
+  width: 16vw;
+  height: 60px;
+  margin-left:80vw;
   gap: 0.7rem;
   text-decoration: none;
-  margin-top:-11vh;
+  margin-top:-9vh;
   font-size:9px;
   text-decoration: none;
   padding: 20px;

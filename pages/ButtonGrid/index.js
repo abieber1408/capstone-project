@@ -1,11 +1,11 @@
 
-import { ButtonGrid } from "../../components/QuestionButtons";
+import QuestionCard from "../../components/QuestionCard";
 
-export default function ButtonGridExport() {
+export default function ButtonGridExport({ topic, imageSrc }) {
     
     return (
         <>
-     <ButtonGrid/>
+     <QuestionCard topic={topic} imageSrc={imageSrc} />
        </>
     )
 };

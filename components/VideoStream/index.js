@@ -10,10 +10,10 @@ export default function VideoStream() {
 export const VideoStreamFieldset = styled.fieldset`
     display: flex;
     flex-direction: column;
-    height: 355px;
-    width:140%;
-    margin-left: 4vw;
-    margin-top: 21vh;
+    height: 280px;
+    width:105%;
+    margin-left: 6vw;
+    margin-top:18vh;
     border-radius: 10px;
     overflow: hidden; 
     background-color:black;

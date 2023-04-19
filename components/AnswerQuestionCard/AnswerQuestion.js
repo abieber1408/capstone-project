@@ -22,10 +22,10 @@ export default function Quiz ({data, id, onAnswered, onNext}) {
 
   return (
   <StyledSection>
-  <section>
+
     {data && (
       <div>
-        <p>{data.question}<ButtonNextQuestion onClick={onNext}>back</ButtonNextQuestion></p>
+       {data.question}<ButtonNextQuestion onClick={onNext}>back</ButtonNextQuestion>
         <article>
           <StyledButton onClick={() => handleAnswerClick(data.answer1)}>
             {data.answer1}
@@ -37,9 +37,9 @@ export default function Quiz ({data, id, onAnswered, onNext}) {
         {showAnswer && (
           <AnswerContainer> 
             {userAnswer === data.correctAnswer ? (
-              <p>Right!!</p>
+              <h2>Right!!</h2>
             ) : (
-              <p>False!!</p>
+              <h3>False!!</h3>
             )}
           </AnswerContainer>
         )}
@@ -47,27 +47,28 @@ export default function Quiz ({data, id, onAnswered, onNext}) {
     )}
     <Footing>Select your answer
     </Footing>
-  </section>
   </StyledSection>
 );
 };
 export const StyledSection = styled.section`
 margin-top: 50px;
-margin-left: 15px;
+margin-left:0px;
+font-size:18px;
 `;
 export const AnswerContainer = styled.div`
   display: flex;
-  padding: 1px;
-  margin: 10px;
+  padding:70px;
+  margin: 20px;
   right: 5;
-  background-color: RGBA(192,143,230,0.87);
+  background-color: RGBA(255,151,13,0.4);
   width: 30%;
   display: flex;
   justify-content: center;
   float: right;
   font-weight: 100;
   align-items: center;
-  max-height:   75px;
+  max-height:   100px;
+  
 `;
 
 export const ButtonNextQuestion = styled.button`
@@ -80,12 +81,12 @@ export const ButtonNextQuestion = styled.button`
   background-color:#35268c;
   border-radius: 100px;
   color: #efedfa;
-  font-size: 5px;
+  font-size: 8px;
   font-weight: bold;
   cursor: w-resize;
   margin-left: 280px;
   text-decoration: none;
-  width: 18vw;
+  width: 15vw;
 `;
 
 export const StyledButton = styled.button`
@@ -102,7 +103,7 @@ export const StyledButton = styled.button`
   font-weight: 100;
   cursor: help;
   margin-block:10px;
-  box-shadow: 5px 5px 0px RGBA(199,176,230,0.7);
+  box-shadow: 5px 5px 0px RGBA(18,195,104,0.4);0
   border-radius: 20px;
   margin-left: 15px;
   border:1px

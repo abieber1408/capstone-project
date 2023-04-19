@@ -1,17 +1,15 @@
-import Heading from "../components/Heading";
-import Footing from "../components/Footing";
+
 
 import { StartForm } from "../components/StartForm/index.js";
 import ContinueButton from "../components/ContinueButton";
 
 
-export default function Home() {
+export default function Home({ onTopicChange, topic, imageSrc} ) {
   
   return (
     <>
-      <StartForm></StartForm>
+      <StartForm onTopicChange={onTopicChange} topic={topic} imageSrc={imageSrc}/>
       <ContinueButton text="Questions" href="./ButtonGrid" />
-   
 </>
   );
 }

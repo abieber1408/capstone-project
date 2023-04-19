@@ -3,14 +3,11 @@ import Footing from "../Footing";
 import { subjects } from "../../lib/subjects"
 import { useState } from "react";
 import Quiz from "../AnswerQuestionCard/AnswerQuestion";
-import ResultContainer from "../ResultContainer/StyledResultContainer";
 import Image from "next/image";
-import StyledTopic from "../Topic/StyledTopic";
+import { StyledImage } from "../TopicForm";
+import Heading from "../Heading";
 
-
-
-export function ButtonGrid() {
-
+export default function QuestionCard({ imageSrc, topic }) {
   const [openId, setOpenId] = useState(null);
   const [answered, setAnswered] = useState([]);
   const questionIds = [...Array(20)].map((_, index)=> index);
@@ -50,14 +47,9 @@ export function ButtonGrid() {
 
   return (
     <>
-      <StyledTopic>
-      Art
-      </StyledTopic>
-       <StyledImage
-         src={"/images/art.jpg"}
-         alt="art"
-         width={75}
-         height={75} />
+      <Heading/>
+      <StyledImage src={imageSrc} alt={topic} width={135} height={88}/>
+      <p>{topic}</p>
       <ResultContainer>
         Level
         <div>1 </div>
@@ -68,17 +60,16 @@ export function ButtonGrid() {
           alt="star"
           width={45}
           height={45} />
-        <dl style={{ position: "absolute", top:-30, left: 19}}>
-       <h2>{newStarScore}</h2>
+          <dl style={{ position: "absolute", top:-15, left: 19}}>
+          <h2>{newStarScore}</h2>
         </dl>
         </h1>
       </ResultContainer>
       <StyledButtonGrid>
         {questionIds.map((id) => <a className="question" key={id} onClick={() => handleButtonClick(id)}>{id}</a>)}
       </StyledButtonGrid>
-      
-     <Footing> Select a button for your question</Footing>
-    </>
+      <Footing> Select a button for your question</Footing>
+  </>
   );
 };
 
@@ -86,28 +77,30 @@ const StyledButtonGrid = styled.div`
   display: flex;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 10px;
-  padding: 100px;
+  grid-gap:0px;
+  padding: 10px;
+  scroll-behavior: smooth;
 
 
   a {
+    
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
-    width:150%;
+    padding: 18px;
+    width: 85%;
     max-height: 100px;
     background-color: #acccfc;
     border-radius: 6px;
     color: #333;
-    font-size: 8px;
-    margin-block:0px;
-    box-shadow: 5px 5px 0px RGBA(199,176,230,0.7);
-    font-weight: 400;
+    font-size: 12px;
+    margin-block:-80px;
+    box-shadow: 5px 5px 0px RGBA(18,195,104,0.4);
+    font-weight: 300;
     text-decoration: none;
-    transition: all 0.40s ease-in-out;
-    margin-top: 35px;
-    margin-left: -75px;
+    transition: all 0.50s ease-in-out;
+    margin-top: 110px;
+    margin-left:15px;
     &:hover {
       background-color: #35268c;
       color: #efedfa;
@@ -116,13 +109,46 @@ const StyledButtonGrid = styled.div`
   }
 `;
 
-const StyledImage = styled.img`
+const StyledTopic = styled.div`
 display: flex;
 flex-direction: row;
-margin-top:6vh;
+margin-top: 10vh;
 justify-content: center;
 align-items: center;
-width: 50%;
-margin-left: 25px;
 position: fixed;
+margin-left: 25px;
+`;
+
+
+const ResultContainer = styled.div`
+display: flex;
+flex-direction: column;
+float: right;
+position: fixed;
+margin-left:326px;
+margin-top: 15vh;
+
+div { 
+    margin-top: 50;
+    justify-content: center;
+    height: 30px;
+    text-align: center;
+    width: 30px;
+    font-size: 10px;
+    float: right;
+    border: 1px solid black;
+    border-radius: 5px;
+    align-items: flex-end;
+    padding: 4px;
+    background-color: #35268c;
+  color: white;
+}
+  h2{
+    text-align: center;
+    font-size: 10px;
+  }
+  h1{
+    margin-left: 0vw;
+  }
+
 `;
