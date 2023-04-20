@@ -15,7 +15,7 @@ const Heading = styled.h1`
   text-align: center;
   color: #FFFFFF;
   font-weight: 800;
-  top: 0;
+  top: 0vh;
   font-size: 55px;
   margin-left: -75px;
 

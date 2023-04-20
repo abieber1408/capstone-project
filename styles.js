@@ -10,7 +10,7 @@ export default createGlobalStyle`
   }
   body {
     font-size: 12px;
-    margin: 10;
+    margin:0;
     font-family: system-ui;
     place-items: center;
     min-height: 100vh;

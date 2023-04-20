@@ -77,15 +77,16 @@ const StyledButtonGrid = styled.div`
   display: flex;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap:0px;
-  padding: 10px;
+  grid-gap:2px;
+  padding: 8px;
   scroll-behavior: smooth;
+  transition: all 0.90s ease-in-out;
 
   a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 18px;
+    padding:20px;
     width: 85%;
     max-height: 100px;
     background-color: #acccfc;
@@ -96,9 +97,9 @@ const StyledButtonGrid = styled.div`
     box-shadow: 5px 5px 0px RGBA(18,195,104,0.4);
     font-weight: 300;
     text-decoration: none;
-    transition: all 0.50s ease-in-out;
-    margin-top: 110px;
-    margin-left:15px;
+   
+    margin-top: 120px;
+    margin-left:3vw;
 
     &:hover {
       background-color: #35268c;
@@ -111,7 +112,7 @@ const StyledButtonGrid = styled.div`
 const ResultContainer = styled.div`
 display: flex;
 flex-direction: column;
-float: right;
+
 position: fixed;
 margin-left:326px;
 margin-top: 15vh;
