@@ -7,19 +7,19 @@ export default function TopicForm({ onTopicChange, topic, imageSrc} ) {
         <StyledFormLabel>
             <select id="select-topic" name="select-topic" onChange={(event)=>onTopicChange(event)}>
             <option value="">Topic:</option>
-            <option value="Chemistry">Chemistry</option>
-            <option value="Technology">Technology</option>
-            <option value="Art">Art</option>
-            <option value="Science">Science</option>
-            <option value="Astronomy">Astronomy</option>
-            <option value="EnvironmentalScience">Environmental Science</option>
-            <option value="Biology">Biology</option>
-            <option value="Journalism">Journalism</option>
-            <option value="Physics">Physics</option>
-            <option value="Education">Education</option>
-            <option value="Math">Math</option>
-            <option value="Fish">Fish</option>
-            <option value="Sun">Sun</option>
+            <option value="chemistry">Chemistry</option>
+            <option value="technology">Technology</option>
+            <option value="art">Art</option>
+            <option value="science">Science</option>
+            <option value="astronomy">Astronomy</option>
+            <option value="environmentalScience">Environmental Science</option>
+            <option value="biology">Biology</option>
+            <option value="journalism">Journalism</option>
+            <option value="physics">Physics</option>
+            <option value="education">Education</option>
+            <option value="math">Math</option>
+            <option value="fish">Fish</option>
+            <option value="sun">Sun</option>
            </select>
         </StyledFormLabel>
         {imageSrc && <StyledImage src={imageSrc} alt={topic} width={135} height={88} />}

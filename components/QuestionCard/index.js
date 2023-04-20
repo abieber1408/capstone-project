@@ -11,7 +11,7 @@ export default function QuestionCard({ imageSrc, topic, level }) {
   const [openId, setOpenId] = useState(null);
   const [answered, setAnswered] = useState([]);
   const questionIds = [...Array((level || 1) * 4)].map((_, index)=> index);
-
+    
   const handleButtonClick = (id) => {
     if (alreadyAnswered(id)) {
       // Cannot answer twice.
