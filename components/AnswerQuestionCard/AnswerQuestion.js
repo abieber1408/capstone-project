@@ -22,7 +22,6 @@ export default function Quiz ({data, id, onAnswered, onNext}) {
 
   return (
   <StyledSection>
-
     {data && (
       <div>
        {data.question}<ButtonNextQuestion onClick={onNext}>back</ButtonNextQuestion>

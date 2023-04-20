@@ -7,10 +7,10 @@ import Image from "next/image";
 import { StyledImage } from "../TopicForm";
 import Heading from "../Heading";
 
-export default function QuestionCard({ imageSrc, topic }) {
+export default function QuestionCard({ imageSrc, topic, level }) {
   const [openId, setOpenId] = useState(null);
   const [answered, setAnswered] = useState([]);
-  const questionIds = [...Array(20)].map((_, index)=> index);
+  const questionIds = [...Array((level || 1) * 4)].map((_, index)=> index);
 
   const handleButtonClick = (id) => {
     if (alreadyAnswered(id)) {
@@ -48,11 +48,11 @@ export default function QuestionCard({ imageSrc, topic }) {
   return (
     <>
       <Heading/>
-      <StyledImage src={imageSrc} alt={topic} width={135} height={88}/>
+      <StyledImage src={imageSrc}  width={135} height={88}/>
       <p>{topic}</p>
       <ResultContainer>
         Level
-        <div>1 </div>
+        <div>{level}</div>
         Score
         <div>{score()} / {questionIds.length}</div>  
         <h1 style={{ position: "relative" }}><Image
@@ -68,7 +68,7 @@ export default function QuestionCard({ imageSrc, topic }) {
       <StyledButtonGrid>
         {questionIds.map((id) => <a className="question" key={id} onClick={() => handleButtonClick(id)}>{id}</a>)}
       </StyledButtonGrid>
-      <Footing> Select a button for your question</Footing>
+      <Footing> Questions</Footing>
   </>
   );
 };
@@ -81,9 +81,7 @@ const StyledButtonGrid = styled.div`
   padding: 10px;
   scroll-behavior: smooth;
 
-
   a {
-    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -101,6 +99,7 @@ const StyledButtonGrid = styled.div`
     transition: all 0.50s ease-in-out;
     margin-top: 110px;
     margin-left:15px;
+
     &:hover {
       background-color: #35268c;
       color: #efedfa;
@@ -108,17 +107,6 @@ const StyledButtonGrid = styled.div`
     }
   }
 `;
-
-const StyledTopic = styled.div`
-display: flex;
-flex-direction: row;
-margin-top: 10vh;
-justify-content: center;
-align-items: center;
-position: fixed;
-margin-left: 25px;
-`;
-
 
 const ResultContainer = styled.div`
 display: flex;
@@ -146,9 +134,9 @@ div {
   h2{
     text-align: center;
     font-size: 10px;
+    
   }
   h1{
-    margin-left: 0vw;
+    margin-left:-2vw;
   }
-
 `;

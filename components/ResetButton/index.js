@@ -1,11 +1,9 @@
-
 import styled from "styled-components";
 
-
-export default function ResetButton() {
+export default function ResetButton({onPlayerNameSubmit, onLevelSubmit, onTopicChange}) {
     return (
       
-           <StyledButton>Reset</StyledButton>
+           <StyledButton onPlayerNameSubmit={onPlayerNameSubmit} onLevelSubmit={onLevelSubmit} onTopicChange={onTopicChange}>Reset</StyledButton>
  
   );
 }

@@ -1,12 +1,9 @@
 import styled from "styled-components";
 
-
-
 export default function TopicForm({ onTopicChange, topic, imageSrc} ) {
   
     return (
       <>
-        
         <StyledFormLabel>
             <select id="select-topic" name="select-topic" onChange={(event)=>onTopicChange(event)}>
             <option value="">Topic:</option>
@@ -26,19 +23,15 @@ export default function TopicForm({ onTopicChange, topic, imageSrc} ) {
            </select>
         </StyledFormLabel>
         {imageSrc && <StyledImage src={imageSrc} alt={topic} width={135} height={88} />}
-        
-   </>
+    </>
     );
- 
 };
 
-
-
 export const StyledImage = styled.img`
-display: flex;
-margin-top: 5px;
-margin-left: 10vw;
-position: fixed;
+  display: flex;
+  margin-top: -2px;
+  margin-left: 10vw;
+  position: fixed;
 `;
 
 export const StyledFormLabel = styled.label`
@@ -60,6 +53,6 @@ export const StyledFormLabel = styled.label`
 `;
 
 export const option = styled.option`
-background-color:  #d4d9ff ;`
+  background-color:  #d4d9ff ;`
 ;
 

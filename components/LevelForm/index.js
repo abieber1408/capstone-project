@@ -1,19 +1,21 @@
 import styled from "styled-components";
 import { useState } from "react";
 
-export default function LevelForm() {
+export default function LevelForm({onLevelChange, level}) {
 
-  
+
   return (
       <StyledLevelLabel htmlFor="select-level">
-        <select id="select-level" name="select-level">
-          <option value="">Level:</option>
-          <option value="one">1</option>
-          <option value="two">2</option>
-          <option value="tree">3</option>
-          <option value="four">4</option>
-        </select>
-        <StartButton>Start</StartButton>
+      <select id="select-level" name="select-level" onChange={(event) =>   onLevelChange(event)} >
+          <option value={0}>Level:</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+      </select>
+      
+      <StartButton>Start</StartButton>
+    
      </StyledLevelLabel>
   );
 }

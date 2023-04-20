@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { useState } from "react";
 
 export default function PlayerNameForm () {
-
   const [playerName, setPlayerName] = useState("");
 
   const handlePlayerNameSubmit = (event) => {
