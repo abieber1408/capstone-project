@@ -10,23 +10,15 @@ export default function App({ Component, pageProps }) {
   const [imageSrc, setImageSrc] = useState("");
   const [level, setLevel] = useState("");
  
-
   const handleTopicChange = (event) => {
-   
     setTopic(event.target.value);
     setImageSrc(`/images/${event.target.value}.jpg`);
   }
 
   const handleLevelChange = (event) => {
-  
     setLevel(event.target.value);
-                
-
-    
    
   };
-
-
   return (
     <>
       <GlobalStyle />
@@ -34,10 +26,8 @@ export default function App({ Component, pageProps }) {
         <title>Capstone Project</title>
       </Head>
       <SWRConfig value={{ fetcher }}>
-        <Component {...pageProps} onLevelChange={handleLevelChange} level={level} onTopicChange={handleTopicChange} topic={topic} imageSrc={imageSrc} />
-        </SWRConfig>
-    
+      <Component {...pageProps} onLevelChange={handleLevelChange} level={level} onTopicChange={handleTopicChange} topic={topic} imageSrc={imageSrc} />
+      </SWRConfig>
     </>
   );
 }
-

@@ -12,7 +12,7 @@ export default function TopicForm({ onTopicChange, topic, imageSrc} ) {
             <option value="art">Art</option>
             <option value="science">Science</option>
             <option value="astronomy">Astronomy</option>
-            <option value="environmentalScience">Environmental Science</option>
+            <option value="environmental">Environmental</option>
             <option value="biology">Biology</option>
             <option value="journalism">Journalism</option>
             <option value="physics">Physics</option>
@@ -22,16 +22,19 @@ export default function TopicForm({ onTopicChange, topic, imageSrc} ) {
             <option value="sun">Sun</option>
            </select>
         </StyledFormLabel>
-        {imageSrc && <StyledImage src={imageSrc} alt={topic} width={135} height={88} />}
+     
+          {imageSrc && <StyledTopicImage src={imageSrc} alt={topic} width={135} height={88} />}
+       
     </>
     );
 };
 
-export const StyledImage = styled.img`
-  display: flex;
-  margin-top: -2px;
-  margin-left: 10vw;
-  position: fixed;
+
+export const StyledTopicImage = styled.img`
+display: flex;
+margin-top:-1px;
+margin-left: 10vw;
+position: fixed;
 `;
 
 export const StyledFormLabel = styled.label`

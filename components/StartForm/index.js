@@ -1,4 +1,3 @@
-import { useState } from "react";
 import LevelForm from "../LevelForm";
 import PlayerNameForm from "../PlayerForm";
 import TopicForm from "../TopicForm";
@@ -8,17 +7,14 @@ import Heading from "../Heading";
 import Footing from "../Footing";
 import React from "react";
 
-export function StartForm( { onTopicChange, imageSrc, onLevelChange, level} ) {
- 
-
+export function StartForm( { onTopicChange, imageSrc, onLevelChange } ) {
   
-    
     return (
         <>
         <Heading>QUIZme</Heading>
         <PlayerNameForm ></PlayerNameForm>
-        <TopicForm onTopicChange={onTopicChange}  imageSrc={imageSrc} >Topic</TopicForm>
-        <LevelForm onLevelChange={onLevelChange} >Level</LevelForm>
+        <TopicForm onTopicChange={onTopicChange} imageSrc={imageSrc} >Topic</TopicForm>
+        <LevelForm onLevelChange={onLevelChange}>Level</LevelForm>
         <VideoStream></VideoStream>
         <ResetButton >Reset</ResetButton>
         <Footing>play and learn</Footing>

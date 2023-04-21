@@ -2,19 +2,28 @@ import styled from "styled-components";
 import { useState } from "react";
 
 export default function LevelForm({onLevelChange, level}) {
+  const [selectedLevel, setSelectedLevel] = useState("");
 
+  const handleLevelSubmit = (event) => {
+    event.preventDefault();
+    localStorage.setItem("selectedLevel", selectedLevel);
+    setSelectedLevel("");
+  };
 
   return (
-      <StyledLevelLabel htmlFor="select-level">
+    <StyledLevelLabel onSubmit={handleLevelSubmit} htmlFor="select-level">
+
       <select id="select-level" name="select-level" onChange={(event) =>   onLevelChange(event)} >
           <option value={0}>Level:</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
+        value={selectedLevel}
+        onChange={(event) => setSelectedLevel(event.target.value)}
       </select>
       
-      <StartButton>Start</StartButton>
+      <StartButton type="submit">Start</StartButton>
     
      </StyledLevelLabel>
   );
@@ -25,15 +34,15 @@ export const StyledLevelLabel = styled.label`
   flex-direction: row-reverse;
   font-weight: bold;
   height: 30px;
-  width: 90%;
+  width: 110%;
   borde-radius: 100px;
   margin-bottom: 0px;
-  margin-left: 20vw;
-  margin-top: -7vh;
+  margin-left: -4vw;
+  margin-top: -6.5vh;
 
   select, option {
     border-radius: 0.7rem;
-    width:60%;
+    width:200%;
     font-size: 18px;
     height:35px;
   }
@@ -50,7 +59,7 @@ export const StartButton = styled.button`
   color: #efedfa;
   font-size: 15px;
   cursor: alias ;
-  margin-top: 9vh;
+  margin-top: 7vh;
   width: 25vw;
-margin-left: 30vw;
+  margin-left: 55vw;
 `;

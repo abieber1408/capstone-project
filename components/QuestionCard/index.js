@@ -4,7 +4,7 @@ import { subjects } from "../../lib/subjects"
 import { useState } from "react";
 import Quiz from "../AnswerQuestionCard/AnswerQuestion";
 import Image from "next/image";
-import { StyledImage } from "../TopicForm";
+
 import Heading from "../Heading";
 
 export default function QuestionCard({ imageSrc, topic, level }) {
@@ -112,7 +112,6 @@ const StyledButtonGrid = styled.div`
 const ResultContainer = styled.div`
 display: flex;
 flex-direction: column;
-
 position: fixed;
 margin-left:326px;
 margin-top: 15vh;
@@ -135,9 +134,14 @@ div {
   h2{
     text-align: center;
     font-size: 10px;
-    
   }
   h1{
     margin-left:-2vw;
   }
+`;
+export const StyledImage = styled.img`
+  display: flex;
+  margin-top:30px;
+  margin-left: 10vw;
+  position: fixed;
 `;

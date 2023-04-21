@@ -14,6 +14,6 @@ const Footing = styled.h2`
   text-align: center;
   color: #FFFFFF;
   font-weight: 100;
-  font-size:20px;
+  font-size:15px;
 `;
 export default Footing;

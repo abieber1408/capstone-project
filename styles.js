@@ -6,7 +6,6 @@ export default createGlobalStyle`
   *::after {
     box-sizing: border-box;
     font-weight:600;
-   
   }
   body {
     font-size: 12px;
@@ -15,9 +14,8 @@ export default createGlobalStyle`
     place-items: center;
     min-height: 100vh;
     max-width: 50rem;
-    margin-right: 25px;
+    margin-right:15px;
     background-color: RGBA(110,32,155,0.05);
-
   }
  p {
     margin-left: 150px;

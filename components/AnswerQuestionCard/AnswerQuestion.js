@@ -24,7 +24,7 @@ export default function Quiz ({data, id, onAnswered, onNext}) {
   <StyledSection>
     {data && (
       <div>
-       {data.question}<ButtonNextQuestion onClick={onNext}>back</ButtonNextQuestion>
+          <h1>{data.question}</h1><ButtonNextQuestion onClick={onNext}>back</ButtonNextQuestion>
         <article>
           <StyledButton onClick={() => handleAnswerClick(data.answer1)}>
             {data.answer1}
@@ -38,21 +38,26 @@ export default function Quiz ({data, id, onAnswered, onNext}) {
             {userAnswer === data.correctAnswer ? (
               <h2>Right!!</h2>
             ) : (
-              <h3>False!!</h3>
+              <h2>False!!</h2>
             )}
           </AnswerContainer>
         )}
       </div>
-    )}
+      )}
+      
     <Footing>Select your answer
     </Footing>
   </StyledSection>
 );
 };
 export const StyledSection = styled.section`
-margin-top: 50px;
+margin-top:60px;
 margin-left:0px;
-font-size:18px;
+font-size:20px;
+h1 {
+  font-size: 25px;
+  margin: 25px;
+}
 `;
 export const AnswerContainer = styled.div`
   display: flex;
@@ -67,7 +72,6 @@ export const AnswerContainer = styled.div`
   font-weight: 100;
   align-items: center;
   max-height:   100px;
-  
 `;
 
 export const ButtonNextQuestion = styled.button`
@@ -92,11 +96,11 @@ export const StyledButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 30px;
+  padding: 50px;
   width: 93%;
   max-height: 40px;
   background-color: #acccfc;
-  border-radius: 15px;
+  border-radius: 5px;
   color: #000000;
   font-size: 18px;
   font-weight: 100;
@@ -104,6 +108,7 @@ export const StyledButton = styled.button`
   margin-block:10px;
   box-shadow: 5px 5px 0px RGBA(18,195,104,0.4);0
   border-radius: 20px;
-  margin-left: 15px;
+  margin-left: 18px;
   border:1px
+
 `;
