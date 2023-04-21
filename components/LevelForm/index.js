@@ -35,10 +35,10 @@ export const StyledLevelLabel = styled.label`
   font-weight: bold;
   height: 30px;
   width: 110%;
-  borde-radius: 100px;
+  border-radius: 100px;
   margin-bottom: 0px;
-  margin-left: -4vw;
-  margin-top: -6.5vh;
+  
+  margin:-6.5vh 0 0 -4vw;
 
   select, option {
     border-radius: 0.7rem;

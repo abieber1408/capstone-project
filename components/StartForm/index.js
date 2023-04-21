@@ -7,7 +7,7 @@ import Heading from "../Heading";
 import Footing from "../Footing";
 import React from "react";
 
-export function StartForm( { onTopicChange, imageSrc, onLevelChange } ) {
+export function StartForm( { onTopicChange, imageSrc, onLevelChange, topic} ) {
   
     return (
         <>

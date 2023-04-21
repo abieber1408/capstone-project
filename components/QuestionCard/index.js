@@ -54,16 +54,16 @@ export default function QuestionCard({ imageSrc, topic, level }) {
         Level
         <div>{level}</div>
         Score
-        <div>{score()} / {questionIds.length}</div>  
-        <h1 style={{ position: "relative" }}><Image
-          src={"/images/star.png"}
-          alt="star"
-          width={45}
-          height={45} />
-          <dl style={{ position: "absolute", top:-15, left: 19}}>
-          <h2>{newStarScore}</h2>
-        </dl>
-        </h1>
+         <div>{score()} / {questionIds.length}</div>  
+          <h1 style={{ position: "relative" }}><Image
+              src={"/images/star.png"}
+              alt="star"
+              width={45}
+              height={45} />
+              <dl style={{ position: "absolute", top:-15, left: 19}}>
+              <h2>{newStarScore}</h2>
+              </dl>
+         </h1>
       </ResultContainer>
       <StyledButtonGrid>
         {questionIds.map((id) => <a className="question" key={id} onClick={() => handleButtonClick(id)}>{id}</a>)}
@@ -97,7 +97,6 @@ const StyledButtonGrid = styled.div`
     box-shadow: 5px 5px 0px RGBA(18,195,104,0.4);
     font-weight: 300;
     text-decoration: none;
-   
     margin-top: 120px;
     margin-left:3vw;
 

@@ -43,10 +43,9 @@ export const StyledFormLabel = styled.label`
   font-weight: bold;
   height: 40px;
   width: 100%;
-  borde-radius: 100px;
-  margin-bottom: 5px;
-  margin-left: 6vw;
-  margin-top:  -11vh;
+  border-radius: 100px;
+
+  margin: -11vh 0 5px 6vw; 
 
   select, option {
     border-radius: 0.7rem;
