@@ -6,6 +6,7 @@ import Quiz from "../AnswerQuestionCard/AnswerQuestion";
 
 import ContinueButton from "../ContinueButton";
 import Heading from "../Heading";
+import Image from "next/image";
 
 export default function QuestionCard({ imageSrc, topic, level }) {
   const [openId, setOpenId] = useState(null);
@@ -59,7 +60,7 @@ export default function QuestionCard({ imageSrc, topic, level }) {
       <Wrapper>
         <ResultContainer>
           <StyledImage>
-            <img src={imageSrc} width={135} height={88} />
+            <Image src={imageSrc} width={135} height={88} alt="topic" />
           </StyledImage>
           <p className="topic">{topic}</p>          
           <div className="score">
@@ -67,25 +68,26 @@ export default function QuestionCard({ imageSrc, topic, level }) {
             <h1>Score {score()}/{questionIds.length}</h1>  
           </div>
         </ResultContainer>
-
+        <div className="button">
+          <ContinueButton text="Home" href="/" />
+        </div>
         <StyledButtonGrid>
           {questionIds.map((id) => <a className={"question " + questionClass(id)} key={id} onClick={() => handleButtonClick(id)}>{subjects[id].question}</a>)}
         </StyledButtonGrid>
-        <ContinueButton text="Home" href="/" />
       </Wrapper>
   </>
   );
 };
 
 const StyledButtonGrid = styled.div`
-  display: flex;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap:0rem;
-  padding: 50px;
+  padding-left: 50px;
+  padding-right: 50px;
   scroll-behavior: smooth;
   transition: all 0.90s ease-in-out;
-  height:12rem;
+  overflow: scroll;
 
   a {
     display: flex;
@@ -98,12 +100,12 @@ const StyledButtonGrid = styled.div`
     border-radius: 0.2rem;
     color: #333;
     font-size: 12px;
-    margin-block:-100px;
     box-shadow: 5px 5px 5px #AFC3D7;
     font-weight: 300;
     text-decoration: none;
-    margin-top:12rem;
-    margin-left:3vw;
+    margin-top: 20px;
+    margin-left: 3vw;
+    margin-bottom: 20px;
 
     &:hover {
       background-color: #35268c;
@@ -129,6 +131,8 @@ const ResultContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  grid-area: header;
+  height: 150px;
 
   background-color: #4A86D4;
   color: white;
@@ -174,12 +178,12 @@ export const StyledImage = styled.div`
 const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
-  
-  /* grid container settings, see https://css-tricks.com/how-to-use-css-grid-for-sticky-headers-and-footers/#aa-fixed-header-fixed-footer */
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas: 
-    'header'
-    'main';
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  div.button {
+    padding: 10px;
+    text-align: right;
+  }
 `;
