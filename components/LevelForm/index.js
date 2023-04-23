@@ -27,13 +27,9 @@ export default function LevelForm({onLevelChange, level}) {
 }
 
 export const StyledLevelLabel = styled.label`
-  display: flex;
   flex-direction: column;
   font-weight: 100;
   height: 40px;
-
-
-  margin: 12vh 500vw 0vh -58vw;
 
   select, option {
    

@@ -21,31 +21,20 @@ export default function TopicForm({ onTopicChange, topic, imageSrc} ) {
             <option value="fish">Fish</option>
             <option value="sun">Sun</option>
            </select>
-        </StyledFormLabel>
-     
-          {imageSrc && <StyledTopicImage src={imageSrc} alt={topic} width={100} height={80} />}
-       
+        </StyledFormLabel>       
     </>
     );
 };
 
 
 export const StyledTopicImage = styled.img`
-display: flex;
-margin-top:32px;
-margin-left:2vw;
-
 `;
 
 export const StyledFormLabel = styled.label`
-  display:flex;
   flex-direction:column;
   font-weight: 100;
   height: 40px;
   width: 30vw;
-
-
-  margin: 5vh 0 0px 6vw; 
 
   select, option {
     border-radius: 0.1rem;

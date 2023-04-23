@@ -5,10 +5,7 @@ export default function Home({ onLevelChange, level, onTopicChange, topic, image
 
   return (
     <>
-    
-      <StartForm onLevelChange={onLevelChange} level={level}  onTopicChange={onTopicChange} topic={topic} imageSrc={imageSrc}/>
-    {topic && <ContinueButton text="" href="./ButtonGrid" />}  
-      
+      <StartForm onLevelChange={onLevelChange} level={level} onTopicChange={onTopicChange} topic={topic} imageSrc={imageSrc} />
     </>
   );
 }
