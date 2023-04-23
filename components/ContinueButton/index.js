@@ -9,12 +9,11 @@ export default function ContinueButton({text, href}) {
   }
 
 export const StyledLink = styled(Link)`
-  background-color: #5DC1EB ;
+/*background-color: #E4F5F0 ;*/
   border-radius: 0.2rem;
-  color: #efedfa;
+  color: #4A86D4;
   cursor: default;
   width: 5rem;
-
   height: 55px;
   font-size: 40px;
   text-decoration: none;

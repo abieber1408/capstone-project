@@ -30,6 +30,7 @@ export const StyledForm = styled.form`
   justify-content: center;
   width: 50vw;
   margin-left: 24vw;
+  padding-top: 15px;
 `;
 export const Label = styled.label`
 `;
