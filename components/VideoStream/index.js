@@ -10,15 +10,14 @@ import styled from "styled-components";
     );
   }
 
-export const VideoStreamFieldset = styled.fieldset`
+export const VideoStreamFieldset = styled.div`
     display: flex;
-    height: 25rem;
-    width:100%;
-    margin-left: 0vw;
-    margin-top:20vh;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
     overflow: hidden; 
-    background-color:#27A0F2;
-  
-   
+    background-color: black;
+    margin: 10px;
+    padding: 10px;
 `;
-
