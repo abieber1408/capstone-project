@@ -14,14 +14,14 @@ export function StartForm( { onTopicChange, imageSrc, onLevelChange, topic} ) {
   
     return (
         <>
-            <Wrapper>
+            <Section>
                 <Heading>
                     <h1>QUIZme</h1>
                     <PlayerNameForm />
                 </Heading>
-                <div class="video">
+                <Video>
                     <VideoStream topic={topic} />
-                </div>
+                </Video>
                 <Footing>
                     <div className="column grid">
                         <TopicForm onTopicChange={onTopicChange} imageSrc={imageSrc} />
@@ -34,12 +34,12 @@ export function StartForm( { onTopicChange, imageSrc, onLevelChange, topic} ) {
                         {topic && <ContinueButton text="?" href="./ButtonGrid" />}  
                     </div>
                 </Footing>
-            </Wrapper>
+            </Section>
         </>
 )
 };
 
-const Wrapper = styled.div`
+const Section = styled.div`
   width: 100%;
   height: 100vh;
   
@@ -51,10 +51,10 @@ const Wrapper = styled.div`
     'header'
     'main'
     'footer';
+`;
 
-  div.video {
+const Video = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-  }
 `;

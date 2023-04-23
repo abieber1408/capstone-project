@@ -57,7 +57,7 @@ export default function QuestionCard({ imageSrc, topic, level }) {
 
   return (
     <>
-      <Wrapper>
+      <Section>
         <ResultContainer>
           <StyledImage>
             <Image src={imageSrc} width={135} height={88} alt="topic" />
@@ -69,12 +69,12 @@ export default function QuestionCard({ imageSrc, topic, level }) {
           </div>
         </ResultContainer>
         <div className="button">
-          <ContinueButton text="Home" href="/" />
+          <ContinueButton text="<" href="/" />
         </div>
         <StyledButtonGrid>
           {questionIds.map((id) => <a className={"question " + questionClass(id)} key={id} onClick={() => handleButtonClick(id)}>{subjects[id].question}</a>)}
         </StyledButtonGrid>
-      </Wrapper>
+      </Section>
   </>
   );
 };
@@ -175,7 +175,7 @@ export const StyledImage = styled.div`
   padding: 30px;
 `;
 
-const Wrapper = styled.div`
+const Section = styled.div`
   width: 100%;
   height: 100vh;
   display: flex;
