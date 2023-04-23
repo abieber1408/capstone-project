@@ -23,7 +23,7 @@ export default function TopicForm({ onTopicChange, topic, imageSrc} ) {
            </select>
         </StyledFormLabel>
      
-          {imageSrc && <StyledTopicImage src={imageSrc} alt={topic} width={135} height={88} />}
+          {imageSrc && <StyledTopicImage src={imageSrc} alt={topic} width={100} height={80} />}
        
     </>
     );
@@ -32,25 +32,26 @@ export default function TopicForm({ onTopicChange, topic, imageSrc} ) {
 
 export const StyledTopicImage = styled.img`
 display: flex;
-margin-top:-1px;
-margin-left: 10vw;
-position: fixed;
+margin-top:32px;
+margin-left:2vw;
+
 `;
 
 export const StyledFormLabel = styled.label`
   display:flex;
-  flex-direction: row;
-  font-weight: bold;
+  flex-direction:column;
+  font-weight: 100;
   height: 40px;
-  width: 100%;
-  border-radius: 100px;
+  width: 30vw;
 
-  margin: -11vh 0 5px 6vw; 
+
+  margin: 5vh 0 0px 6vw; 
 
   select, option {
-    border-radius: 0.7rem;
-    font-size: 18px;
-    height: 35px;
+    border-radius: 0.1rem;
+    font-size: 15px;
+    height: 30px;
+    color: #6A9AD6;
   }
 `;
 

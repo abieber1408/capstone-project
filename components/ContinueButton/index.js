@@ -9,20 +9,20 @@ export default function ContinueButton({text, href}) {
   }
 
 export const StyledLink = styled(Link)`
+
 display: flex;
-flex-direction: row;
-  justify-content: center;
-  padding: 26px;
-  max-height: 20px;
-  background-color: #35268c;
-  border-radius: 15px;
+
+  padding: 2rem;
+  max-height: 10px;
+  background-color:#8cded7 ;
+  border-radius: 0.2rem;
   color: #efedfa;
   font-size: 15px;
-  cursor: alias ;
-  float: right;
-  width: 35%;
-  margin: -8vh -4vw 30vh 0;
+  cursor: default;
+  width: 5rem;
+  margin: 1vh 0vw 0vh 75vw;
   font-size:15px;
   text-decoration: none;
   text-align: center;
+  margin-botton: 50px;
 `;

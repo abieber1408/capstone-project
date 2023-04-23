@@ -12,17 +12,14 @@ export default createGlobalStyle`
     margin:0;
     font-family: system-ui;
     place-items: center;
-    min-height: 100vh;
-    max-width: 50rem;
-    margin-right:15px;
-    background-color: RGBA(110,32,155,0.05);
+    background-color:#5DC1EB;
  
   }
  p {
   display: flex;
     margin-left: 150px;
     position: fixed;
-    margin-top: 5vh;
+    margin-top: 10vh;
     color: babyblue;
     font-size:30px;
     font-margin: black;

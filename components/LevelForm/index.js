@@ -22,44 +22,25 @@ export default function LevelForm({onLevelChange, level}) {
         value={selectedLevel}
         onChange={(event) => setSelectedLevel(event.target.value)}
       </select>
-      
-      <StartButton type="submit">Start</StartButton>
-    
      </StyledLevelLabel>
   );
 }
 
 export const StyledLevelLabel = styled.label`
   display: flex;
-  flex-direction: row-reverse;
-  font-weight: bold;
-  height: 30px;
-  width: 110%;
-  border-radius: 100px;
-  margin-bottom: 0px;
-  
-  margin:-6.5vh 0 0 -4vw;
+  flex-direction: column;
+  font-weight: 100;
+  height: 40px;
+
+
+  margin: 12vh 500vw 0vh -58vw;
 
   select, option {
-    border-radius: 0.7rem;
-    width:200%;
-    font-size: 18px;
-    height:35px;
+   
+    border-radius: 0.1rem;
+    font-size: 15px;
+    height:30px;
+    color: #6A9AD6;
   }
 `;
 
-export const StartButton = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 35px;
-  max-height: 30px;
-  background-color: #35268c;
-  border-radius: 15px;
-  color: #efedfa;
-  font-size: 15px;
-  cursor: alias ;
-  margin-top: 7vh;
-  width: 25vw;
-  margin-left: 55vw;
-`;

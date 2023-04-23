@@ -12,14 +12,13 @@ import styled from "styled-components";
 
 export const VideoStreamFieldset = styled.fieldset`
     display: flex;
-    flex-direction: column;
-    height: 280px;
-    width:105%;
-    margin-left: 2vw;
-    margin-top:18vh;
-    border-radius: 10px;
+    height: 25rem;
+    width:100%;
+    margin-left: 0vw;
+    margin-top:20vh;
     overflow: hidden; 
-    background-color:black;
+    background-color:#27A0F2;
+  
    
 `;
 

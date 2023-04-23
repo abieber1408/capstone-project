@@ -6,7 +6,7 @@ import { useState} from "react";
 const fetcher = (url) => fetch(url).then((r) => r.json());
 
 export default function App({ Component, pageProps }) {
-  const [topic, setTopic] = useState("");20
+  const [topic, setTopic] = useState("");
   const [imageSrc, setImageSrc] = useState("");
   const [level, setLevel] = useState("");
  

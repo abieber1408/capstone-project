@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { useRouter } from "next/router";
-import Footing from "../Footing";
+
 
 export default function Quiz ({data, id, onAnswered, onNext}) {
 
@@ -24,7 +24,7 @@ export default function Quiz ({data, id, onAnswered, onNext}) {
   <StyledSection>
     {data && (
       <div>
-          <h1>{data.question}</h1><ButtonNextQuestion onClick={onNext}>back</ButtonNextQuestion>
+          <h1>{data.question}</h1><ButtonNextQuestion onClick={onNext}>+</ButtonNextQuestion>
         <article>
           <StyledButton onClick={() => handleAnswerClick(data.answer1)}>
             {data.answer1}
@@ -36,17 +36,17 @@ export default function Quiz ({data, id, onAnswered, onNext}) {
         {showAnswer && (
           <AnswerContainer> 
             {userAnswer === data.correctAnswer ? (
-              <h2>Right!!</h2>
+              <h1>Right!!</h1>
             ) : (
-              <h2>False!!</h2>
+              <h1>False!!</h1>
             )}
           </AnswerContainer>
         )}
       </div>
       )}
       
-    <Footing>Select your answer
-    </Footing>
+    
+    
   </StyledSection>
 );
 };
@@ -61,17 +61,16 @@ h1 {
 `;
 export const AnswerContainer = styled.div`
   display: flex;
-  padding:70px;
-  margin: 20px;
-  right: 5;
-  background-color: RGBA(255,151,13,0.4);
+  padding:18px;
+  margin: 3rem;
+  margin-right:35vw;
+  background-color: #85B4EB;
   width: 30%;
-  display: flex;
   justify-content: center;
   float: right;
   font-weight: 100;
   align-items: center;
-  max-height:   100px;
+  max-height:   890px;
 `;
 
 export const ButtonNextQuestion = styled.button`
@@ -79,36 +78,34 @@ export const ButtonNextQuestion = styled.button`
   justify-content: center;
   align-items: center;
   padding: 30px;
-  width: justify-center;
-  max-height: 50px;
-  background-color:#35268c;
-  border-radius: 100px;
+  max-height: 4rem;
+  background-color:#5DC1EB;
   color: #efedfa;
-  font-size: 8px;
-  font-weight: bold;
+  font-size: 70px;
+  font-weight: 100;
   cursor: w-resize;
-  margin-left: 280px;
-  text-decoration: none;
-  width: 15vw;
+  margin-left: 18rem;
+  width: 10vw;
+  border: none;
 `;
 
 export const StyledButton = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 50px;
-  width: 93%;
+  padding:50px;
+  width: 90%;
   max-height: 40px;
-  background-color: #acccfc;
+  background-color: #6A9AD6;
   border-radius: 5px;
   color: #000000;
   font-size: 18px;
-  font-weight: 100;
+  font-weight: 200;
   cursor: help;
   margin-block:10px;
-  box-shadow: 5px 5px 0px RGBA(18,195,104,0.4);0
+  box-shadow: 5px 5px 15px #AFC3D7;
   border-radius: 20px;
   margin-left: 18px;
-  border:1px
+  border:10px
 
 `;
