@@ -3,8 +3,8 @@ import Footing from "../Footing";
 import { subjects } from "../../lib/subjects"
 import { useState } from "react";
 import Quiz from "../AnswerQuestionCard/AnswerQuestion";
-import Image from "next/image";
 
+import ContinueButton from "../ContinueButton";
 import Heading from "../Heading";
 
 export default function QuestionCard({ imageSrc, topic, level }) {
@@ -45,30 +45,28 @@ export default function QuestionCard({ imageSrc, topic, level }) {
   let stars = 2;
   const newStarScore = stars * newScore;
 
+  const questionClass = (questionId) => {
+    const answerState = answered.find(answer => answer.id === questionId);
+    if (answerState === undefined) {
+      return 'question-not-answered';
+    }
+    return answerState.correct ? 'answer-correct' : 'answer-wrong';
+  }
+
   return (
     <>
-      <Heading/>
-      <StyledImage src={imageSrc}  width={135} height={88}/>
-      <p>{topic}</p>
       <ResultContainer>
-        Level
-        <div>{level}</div>
-        Score
-         <div>{score()} / {questionIds.length}</div>  
-          <h1 style={{ position: "relative" }}><Image
-              src={"/images/star.png"}
-              alt="star"
-              width={45}
-              height={45} />
-              <dl style={{ position: "absolute", top:-15, left: 19}}>
-              <h2>{newStarScore}</h2>
-              </dl>
-         </h1>
+      <StyledImage src={imageSrc}  width={135} height={88}/>
+       <p>{topic}</p>
+        <h1> Level {level}</h1>
+        <h1>Score {score()}/{questionIds.length}</h1>      
       </ResultContainer>
+
       <StyledButtonGrid>
-        {questionIds.map((id) => <a className="question" key={id} onClick={() => handleButtonClick(id)}>{id}</a>)}
+        {questionIds.map((id) => <a className={"question " + questionClass(id)} key={id} onClick={() => handleButtonClick(id)}>{subjects[id].question}</a>)}
       </StyledButtonGrid>
-      <Footing> Questions</Footing>
+      <ContinueButton text="Home" href="/" />
+     
   </>
   );
 };
@@ -77,27 +75,28 @@ const StyledButtonGrid = styled.div`
   display: flex;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap:2px;
-  padding: 8px;
+  grid-gap:0rem;
+  padding: 50px;
   scroll-behavior: smooth;
   transition: all 0.90s ease-in-out;
+  height:12rem;
 
   a {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding:20px;
-    width: 85%;
+    padding:35px;
+    width: 90%;
     max-height: 100px;
-    background-color: #acccfc;
-    border-radius: 6px;
+    background-color: #6A9AD6;
+    border-radius: 0.2rem;
     color: #333;
     font-size: 12px;
-    margin-block:-80px;
-    box-shadow: 5px 5px 0px RGBA(18,195,104,0.4);
+    margin-block:-100px;
+    box-shadow: 5px 5px 5px #AFC3D7;
     font-weight: 300;
     text-decoration: none;
-    margin-top: 120px;
+    margin-top:12rem;
     margin-left:3vw;
 
     &:hover {
@@ -105,42 +104,61 @@ const StyledButtonGrid = styled.div`
       color: #efedfa;
       transform: translateY(-2px);
     }
+
+    &.question-not-answered {
+      background-color: #6A9AD6;
+    }
+
+    &.answer-wrong {
+      background-color: #FA7A66;;
+    }
+
+    &.answer-correct {
+      background-color: #3ED6D3;
+    }
   }
 `;
 
 const ResultContainer = styled.div`
 display: flex;
-flex-direction: column;
+flex-direction: row;
 position: fixed;
-margin-left:326px;
-margin-top: 15vh;
+margin-left:0rem;
+margin-top:0vh;
+background-color:#4A86D4;
+color: white;
 
 div { 
-    margin-top: 50;
+    margin-top: 150px;
     justify-content: center;
-    height: 30px;
-    text-align: center;
-    width: 30px;
+    height: 1.5rem;
+    text-align: left;
+    width: 50rem;
     font-size: 10px;
-    float: right;
-    border: 1px solid black;
-    border-radius: 5px;
-    align-items: flex-end;
-    padding: 4px;
-    background-color: #35268c;
-  color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 2px;
+    margin-right: 5rem;
+    background-color: #6A9AD6;
+     color: white;
 }
+  h1{  background-color: #4A86D4;
+    display: flex;
+    margin-left:14vw;
+    font-size: 10px;
+    margin-top:8rem;
+    text-align: center;
+    border-radius: 2px;
+    width: 8%;
+    font-weight: 100;
+  }
   h2{
     text-align: center;
     font-size: 10px;
   }
-  h1{
-    margin-left:-2vw;
-  }
 `;
 export const StyledImage = styled.img`
   display: flex;
-  margin-top:30px;
-  margin-left: 10vw;
-  position: fixed;
+  margin-top:2.5rem;
+  margin-left: 12vw;
 `;

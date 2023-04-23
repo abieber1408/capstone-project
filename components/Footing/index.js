@@ -2,18 +2,10 @@ import styled from "styled-components";
 
 const Footing = styled.h2`
   display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  margin-top: auto; 
-  position: fixed;
-  bottom: 0;
+  bottom: -1rem;
   width: 100%;
-  height: 20px; 
-  background-color: #35268c;
-  text-align: center;
+  height: 150px; 
+  background-color: #E4F5F0;
   color: #FFFFFF;
-  font-weight: 100;
-  font-size:15px;
 `;
 export default Footing;
