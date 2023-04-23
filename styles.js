@@ -15,8 +15,8 @@ export default createGlobalStyle`
     background-color:#5DC1EB;
  
   }
- p {
-  display: flex;
+ /*p {
+   display: flex;
     margin-left: 150px;
     position: fixed;
     margin-top: 10vh;
@@ -27,5 +27,5 @@ export default createGlobalStyle`
     text-shadow:1px 1px 0 #444;
     color: white;
    
- }
+ }*/
 `;

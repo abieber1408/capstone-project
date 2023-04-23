@@ -10,7 +10,8 @@ import Heading from "../Heading";
 export default function QuestionCard({ imageSrc, topic, level }) {
   const [openId, setOpenId] = useState(null);
   const [answered, setAnswered] = useState([]);
-  const questionIds = [...Array((level || 1) * 4)].map((_, index)=> index);
+  const effectiveLevel = level || 1
+  const questionIds = [...Array(effectiveLevel * 4)].map((_, index)=> index);
     
   const handleButtonClick = (id) => {
     if (alreadyAnswered(id)) {
@@ -55,18 +56,23 @@ export default function QuestionCard({ imageSrc, topic, level }) {
 
   return (
     <>
-      <ResultContainer>
-      <StyledImage src={imageSrc}  width={135} height={88}/>
-       <p>{topic}</p>
-        <h1> Level {level}</h1>
-        <h1>Score {score()}/{questionIds.length}</h1>      
-      </ResultContainer>
+      <Wrapper>
+        <ResultContainer>
+          <StyledImage>
+            <img src={imageSrc} width={135} height={88} />
+          </StyledImage>
+          <p className="topic">{topic}</p>          
+          <div className="score">
+            <h1>Level {effectiveLevel}</h1>
+            <h1>Score {score()}/{questionIds.length}</h1>  
+          </div>
+        </ResultContainer>
 
-      <StyledButtonGrid>
-        {questionIds.map((id) => <a className={"question " + questionClass(id)} key={id} onClick={() => handleButtonClick(id)}>{subjects[id].question}</a>)}
-      </StyledButtonGrid>
-      <ContinueButton text="Home" href="/" />
-     
+        <StyledButtonGrid>
+          {questionIds.map((id) => <a className={"question " + questionClass(id)} key={id} onClick={() => handleButtonClick(id)}>{subjects[id].question}</a>)}
+        </StyledButtonGrid>
+        <ContinueButton text="Home" href="/" />
+      </Wrapper>
   </>
   );
 };
@@ -120,45 +126,60 @@ const StyledButtonGrid = styled.div`
 `;
 
 const ResultContainer = styled.div`
-display: flex;
-flex-direction: row;
-position: fixed;
-margin-left:0rem;
-margin-top:0vh;
-background-color:#4A86D4;
-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-div { 
-    margin-top: 150px;
-    justify-content: center;
-    height: 1.5rem;
-    text-align: left;
-    width: 50rem;
-    font-size: 10px;
-    padding: 1rem;
-    border: none;
-    border-radius: 2px;
-    margin-right: 5rem;
-    background-color: #6A9AD6;
-     color: white;
-}
-  h1{  background-color: #4A86D4;
+  background-color: #4A86D4;
+  color: white;
+
+  h1 {  
+    background-color: #4A86D4;
     display: flex;
-    margin-left:14vw;
     font-size: 10px;
-    margin-top:8rem;
     text-align: center;
     border-radius: 2px;
     width: 8%;
     font-weight: 100;
   }
-  h2{
+
+  h2 {
     text-align: center;
-    font-size: 10px;
+    font-size: 10px
   }
+
+  p.topic {
+    font-size: 30px;
+    margin-left: -100px;
+    margin-right: -100px;
+    width: 33%;
+    text-align: center;
+  }
+
+  div.score {
+    display: flex;
+    width: 33%;
+    height: 100%;
+    align-items: flex-end;
+    justify-content: space-around;
+  }
+
 `;
-export const StyledImage = styled.img`
+export const StyledImage = styled.div`
   display: flex;
-  margin-top:2.5rem;
-  margin-left: 12vw;
+  width: 33%;
+  padding: 30px;
+`;
+
+const Wrapper = styled.div`
+  width: 100%;
+  height: 100vh;
+  
+  /* grid container settings, see https://css-tricks.com/how-to-use-css-grid-for-sticky-headers-and-footers/#aa-fixed-header-fixed-footer */
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: 
+    'header'
+    'main';
 `;

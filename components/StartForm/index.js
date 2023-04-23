@@ -43,7 +43,7 @@ const Wrapper = styled.div`
   width: 100%;
   height: 100vh;
   
-  /* grid container settings */
+  /* grid container settings, see https://css-tricks.com/how-to-use-css-grid-for-sticky-headers-and-footers/#aa-fixed-header-fixed-footer */
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr auto;
