@@ -1,7 +1,7 @@
 
  import { render, fireEvent, screen } from "@testing-library/react";
 
-import { StyledButton } from "./ChangeAnswerQuestion";
+import { StyledButton } from "./AnswerQuestion";
 
 describe("AnswerQuestion component", () => {
     it("should call onClick handler when clicked with answer1", () => {

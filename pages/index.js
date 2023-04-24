@@ -1,15 +1,12 @@
+import { StartForm } from "../components/StartForm/index.js";
+import ContinueButton from "../components/ContinueButton"
+import styled from "styled-components";
+export default function Home({ onLevelChange, level, onTopicChange, topic, imageSrc} ) {
 
-import AnswerQuestion from "../components/AnswerQuestionCard";
-import Heading from "../components/Heading";
-import Footing from "../components/Footing";
-import {ButtonGrid} from "../components/QuestionButtons/index";
-
-export default function Home() {
-  
   return (
-    <><Heading>LOGO</Heading> 
-      <Footing>QuizMe-Play and Learn</Footing>
-      <ButtonGrid/>
+    <>
+      <StartForm onLevelChange={onLevelChange} level={level} onTopicChange={onTopicChange} topic={topic} imageSrc={imageSrc} />
     </>
   );
 }
+
