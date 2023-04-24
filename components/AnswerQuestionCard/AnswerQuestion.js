@@ -2,7 +2,6 @@ import { useState } from "react";
 import styled from "styled-components";
 import { useRouter } from "next/router";
 
-
 export default function Quiz ({data, id, onAnswered, onNext}) {
 
   const [showAnswer, setShowAnswer] = useState(false);
@@ -44,12 +43,10 @@ export default function Quiz ({data, id, onAnswered, onNext}) {
         )}
       </div>
       )}
-      
-    
-    
   </StyledSection>
 );
 };
+
 export const StyledSection = styled.section`
 margin-top:60px;
 margin-left:0px;

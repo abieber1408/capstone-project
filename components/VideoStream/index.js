@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
 
-  export default function VideoStream({}) {
- 
-    
+  export default function VideoStream() {
+
+  
     return (
-      <VideoStreamFieldset> 
+      <VideoStreamFieldset>
+   
+        
       </VideoStreamFieldset>
     );
   }
@@ -17,7 +19,7 @@ export const VideoStreamFieldset = styled.div`
     width: 100%;
     border-radius: 10px;
     overflow: hidden; 
-    background-color: black;
+    background-color:black;
     margin: 10px;
     padding: 10px;
 `;

@@ -12,7 +12,7 @@ export default createGlobalStyle`
     margin:0;
     font-family: system-ui;
     place-items: center;
-    background-color:#5DC1EB;
+    background-color: #5DC1EB;
  
   }
  /*p {
@@ -26,6 +26,5 @@ export default createGlobalStyle`
     font-weight: 800;
     text-shadow:1px 1px 0 #444;
     color: white;
-   
  }*/
 `;

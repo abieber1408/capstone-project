@@ -19,9 +19,9 @@ export function StartForm( { onTopicChange, imageSrc, onLevelChange, topic} ) {
                     <h1>QUIZme</h1>
                     <PlayerNameForm />
                 </Heading>
-                <Video>
+                <VideoContainer>
                     <VideoStream topic={topic} />
-                </Video>
+                </VideoContainer>
                 <Footing>
                     <div className="column grid">
                         <TopicForm onTopicChange={onTopicChange} imageSrc={imageSrc} />
@@ -53,7 +53,7 @@ const Section = styled.div`
     'footer';
 `;
 
-const Video = styled.div`
+const VideoContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;

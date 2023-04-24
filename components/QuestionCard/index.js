@@ -1,11 +1,8 @@
 import styled from "styled-components";
-import Footing from "../Footing";
 import { subjects } from "../../lib/subjects"
 import { useState } from "react";
 import Quiz from "../AnswerQuestionCard/AnswerQuestion";
-
 import ContinueButton from "../ContinueButton";
-import Heading from "../Heading";
 import Image from "next/image";
 
 export default function QuestionCard({ imageSrc, topic, level }) {
@@ -59,9 +56,9 @@ export default function QuestionCard({ imageSrc, topic, level }) {
     <>
       <Section>
         <ResultContainer>
-          <StyledImage>
+          <StyledImageContainer>
             <Image src={imageSrc} width={135} height={88} alt="topic" />
-          </StyledImage>
+          </StyledImageContainer>
           <p className="topic">{topic}</p>          
           <div className="score">
             <h1>Level {effectiveLevel}</h1>
@@ -169,13 +166,14 @@ const ResultContainer = styled.div`
   }
 
 `;
-export const StyledImage = styled.div`
+
+export const StyledImageContainer = styled.div`
   display: flex;
   width: 33%;
   padding: 30px;
 `;
 
-const Section = styled.div`
+const Section = styled.section`
   width: 100%;
   height: 100vh;
   display: flex;
