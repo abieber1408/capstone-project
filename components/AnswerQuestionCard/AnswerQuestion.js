@@ -2,7 +2,6 @@ import { useState } from "react";
 import styled from "styled-components";
 import { useRouter } from "next/router";
 
-
 export default function Quiz ({data, id, onAnswered, onNext}) {
 
   const [showAnswer, setShowAnswer] = useState(false);
@@ -51,14 +50,15 @@ export default function Quiz ({data, id, onAnswered, onNext}) {
 );
 };
 export const StyledSection = styled.section`
-margin-top:60px;
-margin-left:0px;
-font-size:20px;
-h1 {
+  margin-top:60px;
+  margin-left:0px;
+  font-size:20px;
+  h1 {
   font-size: 25px;
   margin: 25px;
 }
 `;
+
 export const AnswerContainer = styled.div`
   display: flex;
   padding:18px;

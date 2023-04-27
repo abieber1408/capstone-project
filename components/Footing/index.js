@@ -11,7 +11,7 @@ const Footing = styled.div`
   grid-area: footer;
 
   div.column {
-    width: 33%;
+    width:33%;
     justify-content: center;
     display: flex;
   }

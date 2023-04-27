@@ -15,7 +15,6 @@ const topics = [
   { name: "sun", videoUrl: "https://www.youtube.com/embed/HFT7ATLQQx8" },
   { name: "journalism", videoUrl: "https://www.youtube.com/embed/bq2_wSsDwkQ" }];
 
-
   export default function VideoStream({ topic }) {
     const videoUrl = topics.find(t => t.name === topic)?.videoUrl;
     
@@ -48,5 +47,4 @@ export const VideoStreamFieldset = styled.div`
     background-color:black;
     margin: 10px;
     padding: 10px;
-
 `;
