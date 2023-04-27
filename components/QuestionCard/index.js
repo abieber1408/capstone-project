@@ -1,11 +1,8 @@
 import styled from "styled-components";
-import Footing from "../Footing";
 import { subjects } from "../../lib/subjects"
 import { useState } from "react";
 import Quiz from "../AnswerQuestionCard/AnswerQuestion";
-
 import ContinueButton from "../ContinueButton";
-import Heading from "../Heading";
 import Image from "next/image";
 
 export default function QuestionCard({ imageSrc, topic, level }) {
@@ -52,7 +49,7 @@ export default function QuestionCard({ imageSrc, topic, level }) {
     if (answerState === undefined) {
       return 'question-not-answered';
     }
-    return answerState.correct ? 'answer-correct' : 'answer-wrong';
+      return answerState.correct ? 'answer-correct' : 'answer-wrong';
   }
 
   return (
@@ -80,14 +77,14 @@ export default function QuestionCard({ imageSrc, topic, level }) {
 };
 
 const StyledButtonGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap:0rem;
-  padding-left: 50px;
-  padding-right: 50px;
-  scroll-behavior: smooth;
-  transition: all 0.90s ease-in-out;
-  overflow: scroll;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap:0rem;
+    padding-left: 50px;
+    padding-right: 50px;
+    scroll-behavior: smooth;
+    transition: all 0.90s ease-in-out;
+    overflow: scroll;
 
   a {
     display: flex;
@@ -128,14 +125,13 @@ const StyledButtonGrid = styled.div`
 `;
 
 const ResultContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  grid-area: header;
-  height: 150px;
-
-  background-color: #4A86D4;
-  color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-area: header;
+    height: 150px;
+    background-color: #4A86D4;
+    color: white;
 
   h1 {  
     background-color: #4A86D4;
@@ -167,22 +163,22 @@ const ResultContainer = styled.div`
     align-items: flex-end;
     justify-content: space-around;
   }
-
 `;
+
 export const StyledImage = styled.div`
-  display: flex;
-  width: 33%;
-  padding: 30px;
+    display: flex;
+    width: 33%;
+    padding: 30px;
 `;
 
 const Section = styled.div`
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 
-  div.button {
+    div.button {
     padding: 10px;
     text-align: right;
   }

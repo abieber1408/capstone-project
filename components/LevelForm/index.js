@@ -32,7 +32,6 @@ export const StyledLevelLabel = styled.label`
   height: 40px;
 
   select, option {
-   
     border-radius: 0.1rem;
     font-size: 15px;
     height:30px;

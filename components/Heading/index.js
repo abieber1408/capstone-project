@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const Heading = styled.div`
   padding: 20px;
   width: 100%;
@@ -13,8 +12,8 @@ const Heading = styled.div`
     margin: 0;
     font-size: 55px;
     text-align: center;
-    font-weight: 800;
+    font-weight: 900;
+    text-shadow:1px 1px 1px #18386b;
   }
-
 `;
 export default Heading;

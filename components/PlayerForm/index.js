@@ -32,8 +32,10 @@ export const StyledForm = styled.form`
   margin-left: 24vw;
   padding-top: 15px;
 `;
+
 export const Label = styled.label`
 `;
+
 export const Input = styled.input`
   height: 25px;
   border-radius: 0.1rem;
