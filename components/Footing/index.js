@@ -9,9 +9,11 @@ const Footing = styled.div`
   background-color: #E4F5F0;
   color: #FFFFFF;
   grid-area: footer;
+  padding: 20px;
+  gap:10px;
 
   div.column {
-    width:33%;
+    width:40%;
     justify-content: center;
     display: flex;
   }

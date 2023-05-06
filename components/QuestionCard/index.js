@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { subjects } from "../../lib/subjects"
+import { subjects } from "../../lib/subjects";
 import { useState } from "react";
 import Quiz from "../AnswerQuestionCard/AnswerQuestion";
 import ContinueButton from "../ContinueButton";
@@ -8,9 +8,12 @@ import Image from "next/image";
 export default function QuestionCard({ imageSrc, topic, level }) {
   const [openId, setOpenId] = useState(null);
   const [answered, setAnswered] = useState([]);
-  const effectiveLevel = level || 1
-  const questionIds = [...Array(effectiveLevel * 4)].map((_, index)=> index);
-    
+  const [currentLevel, setCurrentLevel] = useState(level || 1);
+  const questionIds = Object.keys(subjects);
+  const questionIdsForTopic = questionIds.filter((id) => subjects[id].topic === topic);
+  const questionsToShow = questionIdsForTopic.slice(0, currentLevel * 4);
+  const maxQuestions = questionsToShow.length;
+
   const handleButtonClick = (id) => {
     if (alreadyAnswered(id)) {
       // Cannot answer twice.
@@ -21,36 +24,36 @@ export default function QuestionCard({ imageSrc, topic, level }) {
 
   const onNext = () => {
     setOpenId(null);
-  }
+  };
 
   const onAnswered = (id, correct) => {
     if (alreadyAnswered(id)) {
       return;
     }
-    setAnswered((previous => [...previous, { id: id, correct: correct}]));
-  }
+    setAnswered((previous) => [...previous, { id: id, correct: correct }]);
+  };
 
   const alreadyAnswered = (id) => {
-    return answered.find(answer => answer.id === id) !== undefined;
-  }
+    return answered.find((answer) => answer.id === id) !== undefined;
+  };
 
-  const score = () => answered.filter(answer => answer.correct === true).length;
+  const score = () => answered.filter((answer) => answer.correct === true).length;
 
   if (openId !== null) {
-    return <Quiz data={subjects[openId]} id={openId} onAnswered={onAnswered} onNext={onNext}/>
+    return <Quiz data={subjects[openId]} id={openId} onAnswered={onAnswered} onNext={onNext} />;
   }
-  
-  let newScore = score();
-  let stars = 2;
-  const newStarScore = stars * newScore;
 
   const questionClass = (questionId) => {
-    const answerState = answered.find(answer => answer.id === questionId);
+    const answerState = answered.find((answer) => answer.id === questionId);
     if (answerState === undefined) {
-      return 'question-not-answered';
+      return "question-not-answered";
     }
-      return answerState.correct ? 'answer-correct' : 'answer-wrong';
-  }
+    return answerState.correct ? "answer-correct" : "answer-wrong";
+  };
+
+  /*const newScore = score();
+  const stars = 2;
+  const newStarScore = stars * newScore;*/
 
   return (
     <>
@@ -59,22 +62,28 @@ export default function QuestionCard({ imageSrc, topic, level }) {
           <StyledImage>
             <Image src={imageSrc} width={135} height={88} alt="topic" />
           </StyledImage>
-          <p className="topic">{topic}</p>          
+          <p className="topic">{topic}</p>
           <div className="score">
-            <h1>Level {effectiveLevel}</h1>
-            <h1>Score {score()}/{questionIds.length}</h1>  
+            <h1>Level {currentLevel}</h1>
+            <h1>
+              Score {score()}/{maxQuestions}
+            </h1>
           </div>
         </ResultContainer>
         <div className="button">
           <ContinueButton text="<" href="/" />
         </div>
         <StyledButtonGrid>
-          {questionIds.map((id) => <a className={"question " + questionClass(id)} key={id} onClick={() => handleButtonClick(id)}>{subjects[id].question}</a>)}
+          {questionsToShow.map((id) => (
+            <a className={"question " + questionClass(id)} key={id} onClick={() => handleButtonClick(id)}>
+              {subjects[id].question}
+            </a>
+          ))}
         </StyledButtonGrid>
       </Section>
-  </>
+    </>
   );
-};
+}
 
 const StyledButtonGrid = styled.div`
     display: grid;
