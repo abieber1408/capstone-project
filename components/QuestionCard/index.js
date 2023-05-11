@@ -1,18 +1,29 @@
 import styled from "styled-components";
-import { subjects } from "../../lib/subjects";
 import { useState } from "react";
 import Quiz from "../AnswerQuestionCard/AnswerQuestion";
 import ContinueButton from "../ContinueButton";
 import Image from "next/image";
+import useSWR from "swr";
 
 export default function QuestionCard({ imageSrc, topic, level }) {
+const { data, isLoading } = useSWR("api/subjects");
   const [openId, setOpenId] = useState(null);
   const [answered, setAnswered] = useState([]);
   const [currentLevel, setCurrentLevel] = useState(level || 1);
-  const questionIds = Object.keys(subjects);
-  const questionIdsForTopic = questionIds.filter((id) => subjects[id].topic === topic);
+
+  if (isLoading) {
+    return <h1>Loading...</h1>;
+  }
+
+  if (!data) {
+    return;
+  }
+
+  const questionIds = Object.keys(data);
+  const questionIdsForTopic = questionIds.filter((id) => data[id].topic === topic);
   const questionsToShow = questionIdsForTopic.slice(0, currentLevel * 4);
   const maxQuestions = questionsToShow.length;
+
 
   const handleButtonClick = (id) => {
     if (alreadyAnswered(id)) {
@@ -40,7 +51,7 @@ export default function QuestionCard({ imageSrc, topic, level }) {
   const score = () => answered.filter((answer) => answer.correct === true).length;
 
   if (openId !== null) {
-    return <Quiz data={subjects[openId]} id={openId} onAnswered={onAnswered} onNext={onNext} />;
+    return <Quiz data={data[openId]} id={openId} onAnswered={onAnswered} onNext={onNext} />;
   }
 
   const questionClass = (questionId) => {
@@ -55,7 +66,7 @@ export default function QuestionCard({ imageSrc, topic, level }) {
   const stars = 2;
   const newStarScore = stars * newScore;*/
 
-  return (
+ return (
     <>
       <Section>
         <ResultContainer>
@@ -76,7 +87,7 @@ export default function QuestionCard({ imageSrc, topic, level }) {
         <StyledButtonGrid>
           {questionsToShow.map((id) => (
             <a className={"question " + questionClass(id)} key={id} onClick={() => handleButtonClick(id)}>
-              {subjects[id].question}
+              {data[id].question}
             </a>
           ))}
         </StyledButtonGrid>
@@ -192,3 +203,4 @@ const Section = styled.div`
     text-align: right;
   }
 `;
+
