@@ -1,9 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-
 //import { subjects } from "../../../lib/subjects";
-
 import dbConnect from "../../../db/connect";
-import Subject from "../../../db/models/subject";
+import Subject from "../../../db/models/Subject.js";
 
 export default async function handler(request, response) {
     await dbConnect();
@@ -12,6 +10,5 @@ export default async function handler(request, response) {
         const subjects = await Subject.find()
         response.status(200).json(subjects);
     }
-   
 }
   
