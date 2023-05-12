@@ -34,7 +34,7 @@ export const StyledFormLabel = styled.label`
   flex-direction:column;
   font-weight: 100;
   height: 40px;
-  width: 30vw;
+  width: 35vw;
 
   select, option {
     border-radius: 0.1rem;

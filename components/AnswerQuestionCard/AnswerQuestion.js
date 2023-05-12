@@ -1,13 +1,14 @@
+
 import { useState } from "react";
 import styled from "styled-components";
-import { useRouter } from "next/router";
+
 
 export default function Quiz ({data, id, onAnswered, onNext}) {
 
   const [showAnswer, setShowAnswer] = useState(false);
   const [userAnswer, setUserAnswer] = useState(null);
   
-  const router = useRouter();
+
 
   const handleAnswerClick = (answer) => {
     if (showAnswer) {
