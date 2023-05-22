@@ -8,6 +8,8 @@ import Footing from "../Footing";
 import React from "react";
 import { StyledTopicImage } from "../TopicForm";
 import styled from "styled-components";
+import SubjectForm from "../SubjectForm";
+
 
 
 export function StartForm( { onTopicChange, imageSrc, onLevelChange, topic} ) {
@@ -17,13 +19,17 @@ export function StartForm( { onTopicChange, imageSrc, onLevelChange, topic} ) {
             <Section>
                 <Heading>
                     <h1>QUIZme</h1>
+                    
+                    
                     <PlayerNameForm />
                 </Heading>
+                
                 <VideoContainer>
                     <VideoStream topic={topic} />
                 </VideoContainer>
                 <Footing>
                     <div className="column grid">
+                        
                         <TopicForm onTopicChange={onTopicChange} imageSrc={imageSrc} />
                         <LevelForm onLevelChange={onLevelChange} />
                     </div>
@@ -33,6 +39,7 @@ export function StartForm( { onTopicChange, imageSrc, onLevelChange, topic} ) {
                     <div className="column">
                         {topic && <ContinueButton text="?" href="./ButtonGrid" />}  
                     </div>
+                    <ContinueButton text="Create My Quiz" href="./MyQuiz" />
                 </Footing>
             </Section>
         </>

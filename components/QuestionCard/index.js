@@ -5,6 +5,8 @@ import ContinueButton from "../ContinueButton";
 import Image from "next/image";
 import useSWR from "swr";
 
+import SubjectForm from "../SubjectForm";
+
 export default function QuestionCard({ imageSrc, topic, level }) {
 const { data, isLoading } = useSWR("api/subjects");
   const [openId, setOpenId] = useState(null);
@@ -79,11 +81,12 @@ const { data, isLoading } = useSWR("api/subjects");
             <h1>
               Score {score()}/{maxQuestions}
             </h1>
-          </div>
+         </div>
         </ResultContainer>
-        <div className="button">
+       <div className="button" >
           <ContinueButton text="<" href="/" />
-        </div>
+       </div>
+     
         <StyledButtonGrid>
           {questionsToShow.map((id) => (
             <a className={"question " + questionClass(id)} key={id} onClick={() => handleButtonClick(id)}>
@@ -118,7 +121,7 @@ const StyledButtonGrid = styled.div`
     color: #333;
     font-size: 12px;
     box-shadow: 5px 5px 5px #AFC3D7;
-    font-weight: 300;
+    font-weight: 100;
     text-decoration: none;
     margin-top: 20px;
     margin-left: 3vw;
@@ -135,7 +138,7 @@ const StyledButtonGrid = styled.div`
     }
 
     &.answer-wrong {
-      background-color: #FA7A66;;
+      background-color: #FA7A66;
     }
 
     &.answer-correct {
@@ -199,7 +202,7 @@ const Section = styled.div`
     flex-wrap: nowrap;
 
     div.button {
-    padding: 10px;
+    padding: 20px;
     text-align: right;
   }
 `;

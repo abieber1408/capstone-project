@@ -15,8 +15,13 @@ export const StyledLink = styled(Link)`
   cursor: default;
   width: 5rem;
   height: 80px;
-  font-size: 60px;
+  font-size: 20px;
   text-decoration: none;
   text-align: center;
   padding: 3px;
+  &:hover {
+    background-color: #35268c;
+    color: #efedfa;
+    transform: translateY(-2px);
+  }
 `;

@@ -27,7 +27,7 @@ const topics = [
             width="100%"
             height="120%"
             frameborder="0"
-            allowfullscreen
+            allowFullScreen
           />
         ) : (
           <p>Please select a topic to see a video</p>

@@ -12,42 +12,42 @@ The experience of a digital environment makes it more attractive for the student
 
 Its simple design is suitable for any audience.</br>
 
-## To get it Started
 
-Install the dependencies and run the development server:
+## !!!  DEPLOYMENT  !!!</br>
+
+This app is serverless deployed via Vercel over MongoDB Atlas and has a database on Compass.
+
+## To get it Started
+You can start it installing the dependencies and run the development server:
 
 ```bash
-npm run dev
+npm run devYou can   
 # or
 yarn dev
 # or
 pnpm dev
 ```
+Open your localhost. 
+</br>
+</br>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## How to use QUIZme:
+</br>
+1- Select a Topic.</br>
+2- Start the video.</br>
+After watching it, select your level (level 1 is by defect).</br>
+3- Click on ?
+
+- You are now on the questions card:
+
+4- Choose one question and answer it.
+- Wenn finished, select more questions by
+Click on +
+
+You can see your Score: amount of correct answer from total.
+
+### !!!  ADVICE  !!!
+
+This App is under construction.
 
 
-
-### !!!  THIS PART IS UNDER CONSTRUCTION  !!!
-
-
-//*[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/subjects](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/subjects.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.*//

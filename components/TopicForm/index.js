@@ -7,11 +7,11 @@ export default function TopicForm({ onTopicChange, topic, imageSrc} ) {
         <StyledFormLabel>
             <select id="select-topic" name="select-topic" onChange={(event)=>onTopicChange(event)}>
             <option value="">Topic:</option>
-            <option value="chemistry">Chemistry</option>
+            <option value="astronomy">Astronomy</option>
             <option value="technology">Technology</option>
             <option value="art">Art</option>
             <option value="science">Science</option>
-            <option value="astronomy">Astronomy</option>
+            <option value="chemistry">Chemistry</option>
             <option value="environmental">Environmental</option>
             <option value="biology">Biology</option>
             <option value="journalism">Journalism</option>
