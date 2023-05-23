@@ -5,7 +5,7 @@ export default function MyQuiz() {
     return (
         <>
             <SubjectForm />
-         <hr/>
+      
            <SubjectList/>
     </>
     )

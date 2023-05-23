@@ -3,17 +3,17 @@ import useSWR from "swr";
 import styled from "styled-components";
 
 export default function SubjectForm() {
-  const subjects = useSWR("/api/subjects");
+  const myquizes = useSWR("/api/myquizes");
 
   async function handleSubmit(event) {
     event.preventDefault();
 
     const formData = new FormData(event.target);
-    const subjectData = Object.fromEntries(formData);
+    const myquizData = Object.fromEntries(formData);
 
-    const response = await fetch("/api/subjects", {
+    const response = await fetch("/api/myquizes", {
       method: "POST",
-      body: JSON.stringify(subjectData),
+      body: JSON.stringify(myquizData),
       headers: {
         "Content-Type": "application/json",
       },
@@ -22,7 +22,7 @@ export default function SubjectForm() {
       // If our attempt at posting our joke is a success, we proceed here.
       await response.json();
       // At this point, the promise of response has resolved.
-      subjects.mutate();
+      myquizes.mutate();
       // Now we're notifying swr that our data has been mutated, which will trigger a rerender.
       // If we don't include this line, the page won't automatically refresh and our submitted
       // joke won't be immediately visible.
@@ -40,8 +40,8 @@ export default function SubjectForm() {
       
       
       <StyledSubjectLabel htmlFor="topic">
-        Topic:
-        <input type="text" id="topic" name="topic"  placeholder= " lowercase"/>
+        My Name:
+        <input type="text" id="name" name="name"  placeholder= " lowercase"/>
       </StyledSubjectLabel>
 
       <StyledSubjectLabel htmlFor="question">
