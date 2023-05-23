@@ -58,10 +58,10 @@ export default function SubjectList() {
   return (
     <>
      
-        <StyledSubjectHeading >My Questions</StyledSubjectHeading>
+        <StyledSubjectHeading  >My Questions</StyledSubjectHeading>
       <ListSection>
-      <StyledList>
-            <StyledMyQuizAddButton >
+      <StyledList >
+            <StyledMyQuizAddButton id="top">
             {questionIds.map((id) => (
               <a className={"question " + questionClass(id)} key={id} onClick={() => handleButtonClick(id)}>
                 {data[id].question}
@@ -92,7 +92,7 @@ a{
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: 55px;
+  bottom: 60px;
   right: 10px;
   z-index: 1;
   
@@ -103,73 +103,66 @@ a{
 }
 `;
 export const StyledList = styled.div`
-position: relative;
+  position: relative;
   list-style-type: none;
   display: flex;
   gap: 1rem;
   justify-items: center;
-
   overflow-y: scroll;
-  height: 400px;
+  height: 410px;
 `;
 
 const StyledMyQuizAddButton = styled.div`
-   
-display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-gap:2rem;
-   padding: 15px;
-   
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap:2rem;
+  padding: 15px;
+
   a {
-    overflow: scroll;
-   position:relative;
-   scroll-behavior: smooth;
-   transition: all 0.90s ease-in-out;
-   
-    justify-content: center;
-    align-items: center;
-    width: 93%;
-    max-height: 100px;
-    background-color: #6A9AD6;
-    border-radius: 0.5rem;
-    font-size: 12px;
-    box-shadow: 5px 5px 5px #AFC3D7;
-    font-weight: 190;
-    text-decoration: none;
+  overflow: scroll;
+  position:relative;
+  scroll-behavior: smooth;
+  transition: all 0.90s ease-in-out;
+  justify-content: center;
+  align-items: center;
+  width: 93%;
+  max-height: 100px;
+  background-color: #6A9AD6;
+  border-radius: 0.5rem;
+  font-size: 12px;
+  box-shadow: 5px 5px 5px #AFC3D7;
+  font-weight: 190;
+  text-decoration: none;
   top: 1rem;
-   
-    margin-left: 6vw;
+  margin-left: 6vw;
 
-
-    &:hover {
-      background-color: #35268c;
-      color: #efedfa;
-      transform: translateY(-2px);
-    }
-
-    &.question-not-answered {
-      background-color: #6A9AD6;
-    }
-
-    &.answer-wrong {
-      background-color: #FA7A66;
-    }
-
-    &.answer-correct {
-      background-color: #3ED6D3;
-    }
+  &:hover {
+    background-color: #35268c;
+    color: #efedfa;
+    transform: translateY(-2px);
   }
-`;
 
+  &.question-not-answered {
+    background-color: #6A9AD6;
+  }
+
+  &.answer-wrong {
+     background-color: #FA7A66;
+  }
+
+  &.answer-correct {
+   background-color: #3ED6D3;
+  }
+}`;
 
 const StyledSubjectHeading = styled.h2`
 top:12rem;
- margin-left: 8rem;
-  text-align: center;
-  font-size: 18px;
-  font-weight: 250;
-  position: fixed;
-  background: #5DC1EB;
-  z-index: 1;
-  padding: 5px;
- `;
+margin-left: 8rem;
+text-align: center;
+font-size: 18px;
+font-weight: 250;
+position: fixed;
+background: #5DC1EB;
+z-index: 1;
+padding: 5px;
+`;

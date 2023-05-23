@@ -5,7 +5,7 @@ import ContinueButton from "../ContinueButton";
 import Image from "next/image";
 import useSWR from "swr";
 
-import SubjectForm from "../SubjectForm";
+
 
 export default function QuestionCard({ imageSrc, topic, level }) {
 const { data, isLoading } = useSWR("api/subjects");
