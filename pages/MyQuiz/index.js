@@ -5,9 +5,8 @@ export default function MyQuiz() {
     return (
         <>
             <SubjectForm />
-      
-           <SubjectList/>
-    </>
+            <SubjectList />
+        </>
     )
     
 };
