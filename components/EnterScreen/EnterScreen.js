@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Lottie from "lottie-react";
-import questionicon from "../../public/lottie/questionicon.json";
+import questionicon from "../../public/lottie/dots.json";
 
 export default function EnterScreen() {
   return (
@@ -14,7 +14,6 @@ export default function EnterScreen() {
 }
 
 const Container = styled.div`
-  background-color: var(--color-orange);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -28,6 +27,7 @@ const HeadingContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0.9em;
+ 
 `;
 
 const Heading = styled.h1`
@@ -35,7 +35,7 @@ const Heading = styled.h1`
   color: white;
   Font-size:4rem;
   Font-weight:800;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px #000000;
 `;
 
 const QuestionIconAnimation = styled(Lottie)`

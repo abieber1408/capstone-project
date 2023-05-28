@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { useState } from "react";
 import Quiz from "../AnswerQuestionCard/AnswerQuestion";
-import ContinueButton from "../ContinueButton";
+import ContinueButton from "../Buttons";
 import Image from "next/image";
 import useSWR from "swr";
+import NavBar from "../NavBar";
 
 
 
@@ -84,7 +85,7 @@ const { data, isLoading } = useSWR("api/subjects");
          </div>
         </ResultContainer>
        <div className="button" >
-          <ContinueButton text="<" href="/" />
+          <ContinueButton text="Home" href="/" />
        </div>
      
         <StyledButtonGrid>
@@ -94,7 +95,8 @@ const { data, isLoading } = useSWR("api/subjects");
             </a>
           ))}
         </StyledButtonGrid>
-      </Section>
+     </Section>
+     <NavBar/>
     </>
   );
 }
@@ -171,12 +173,12 @@ const ResultContainer = styled.div`
     font-size: 10px
   }
 
-  p.topic {
-    font-size: 30px;
-    margin-left: -100px;
-    margin-right: -100px;
+ .topic {
+    font-size: 40px;
     width: 33%;
     text-align: center;
+    font-weight:800;
+    text-shadow: 1px 1px #000000;
   }
 
   div.score {

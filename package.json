@@ -11,6 +11,7 @@
     "test:watch": "jest --watchAll"
   },
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@lottiefiles/lottie-player": "^1.7.1",
     "eslint": "8.35.0",
     "eslint-config-next": "13.2.3",

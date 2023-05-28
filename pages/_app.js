@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowEnterScreen(false);
-    }, 2000);
+    }, 5000);
     return () => clearTimeout(timer);
   }, []);
 

@@ -1,7 +1,7 @@
 import useSWR from "swr";
 //import { StyledButton } from "../AnswerQuestionCard/AnswerQuestion";
 import styled from "styled-components";
-
+import ContinueButton from "../Buttons";
 export default function SubjectForm() {
   const myquizes = useSWR("/api/myquizes");
 
@@ -41,7 +41,7 @@ export default function SubjectForm() {
       
       <StyledSubjectLabel htmlFor="topic">
         My Name:
-        <input type="text" id="name" name="name"  placeholder= " lowercase"/>
+        <input type="text" id="name" name="name"  placeholder= "lowercase"/>
       </StyledSubjectLabel>
 
       <StyledSubjectLabel htmlFor="question">
@@ -64,7 +64,7 @@ export default function SubjectForm() {
       </StyledSubjectLabel>
 
       <StyledAddButton type="submit">ADD</StyledAddButton>
-    
+      
       </StyledSubjectForm>
      
   );
@@ -72,14 +72,9 @@ export default function SubjectForm() {
 
 
 export const StyledSubjectForm = styled.form`
- width: 100%;
- padding: 40px;
-
- background: #5DC1EB;
- padding: 10px;  
- position: sticky;  
- top: 0;  
- z-index: 1;
+ padding: 15px;
+ background: #4A86D4;
+ font-weight: 100;
 `;
 
 export const StyledSubjectHeading = styled.h2`
@@ -89,16 +84,18 @@ export const StyledSubjectHeading = styled.h2`
 `;
 
 export const StyledSubjectLabel = styled.label`
-  display: flex;
-  justify-content: space-between;
-  allign-items: center;
-  gap: 5px;
+  display: grid;
+  grid-template: auto/150px auto;
   font-weight: 190;
+  width: 94%;
+  margin-left: 15px;
 
 input {
+  displa: flex;
   allign-items: center;
   font-weight:100;
   text-align: center;
+  justify-content: end;
 }
 `;
 
@@ -106,19 +103,20 @@ export const StyledAddButton = styled.button`
   display: flex;
   transition: all 0.90s ease-in-out;
   justify-content: center;
+  margin-left: 15px;
   align-items: center;
   padding:15px;
   width: 10%;
   max-height: 100px;
   background-color: #6A9AD6;
   color: #000000;
-  font-weight:100;
-  margin-block:10px;
+  
   box-shadow: 0px 6px 8px #ffffff;
   border-radius: 10px;
-  border:10px;
+  border:15px;
   font-size: 10px;
   background: #5DC1EB;
+  
   &:hover {
     color: #efedfa;
     transform: translateY(-2px);

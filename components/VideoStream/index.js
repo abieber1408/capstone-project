@@ -30,8 +30,11 @@ const topics = [
             allowFullScreen
           />
         ) : (
-            <p>!Please select a topic to see a video!<br></br>You can make your own Quiz touching the button *Create My Quiz*</p> 
-       
+            <>
+              <p>!Please select a topic to see a video!</p>
+              <p>You can go to the questions selecting *Quiz*</p>
+              <p>Create your owns with *My Quiz*</p>
+            </>
         )}
         
       </VideoStreamFieldset>

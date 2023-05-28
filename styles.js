@@ -5,24 +5,20 @@ export default createGlobalStyle`
   *::before,
   *::after {
     box-sizing: border-box;
-    font-weight:600;
+    font-weight:300;
   }
 
   body {
     font-size: 12px;
-    margin:0;
+    margin:0rem;
     font-family: system-ui;
     place-items: center;
     background-color:#5DC1EB;
+    
   }
-  
-p {
-    font-margin: black;
-    font-weight: 800;
-    text-shadow:1px 1px 1px #444;
- }
- 
-  goto-top {
+
+ a{
+  .goto-top {
     width: 48px;
     height: 48px;
     padding: 8px;
@@ -39,6 +35,5 @@ p {
     bottom: 70px;
     right: 10px;
     z-index: 1;
-  
  }
 `;

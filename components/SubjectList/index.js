@@ -1,13 +1,11 @@
-
 import useSWR from "swr";
 import { useRouter } from "next/router";
-//import { StyledHeading, StyledList } from "./ProductList.styled";
 import { useState } from "react";
 import Quiz from "../AnswerQuestionCard/AnswerQuestion";
 import styled from "styled-components";
+import NavBar from "../NavBar/index";
 
 export default function SubjectList() {
-  const router = useRouter();
   const { data, isLoading } = useSWR("/api/myquizes");
   const [openId, setOpenId] = useState(null);
   const [answered, setAnswered] = useState([]);
@@ -57,10 +55,9 @@ export default function SubjectList() {
 
   return (
     <>
-     
-        <StyledSubjectHeading  >My Questions</StyledSubjectHeading>
+        <StyledSubjectHeading>My Questions</StyledSubjectHeading>
       <ListSection>
-      <StyledList >
+      <StyledList>
             <StyledMyQuizAddButton id="top">
             {questionIds.map((id) => (
               <a className={"question " + questionClass(id)} key={id} onClick={() => handleButtonClick(id)}>
@@ -70,21 +67,22 @@ export default function SubjectList() {
           </StyledMyQuizAddButton>
           </StyledList>
         <a href="#top" className="gototop">UP</a>
-        </ListSection>
-      
+      </ListSection>
+   
     </>
   );
 }
+
 export const ListSection = styled.section`
+
 a{
   transition: all 0.90s ease-in-out;
   width: 48px;
   height: 48px;
-  padding: 8px;
+  padding: 20px;
   border-radius: 50%;
-  background: #FA7A66;
   color: #000000;
-  font-weight:190;
+  font-weight:250;
   box-shadow: 0px 6px 8px #ffffff;
   text-decoration: none;
   flex-shrink: 0;
@@ -92,40 +90,45 @@ a{
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: 60px;
-  right: 10px;
-  z-index: 1;
-  
+  bottom:80px;
+  right: 2rem;
+
   &:hover {
     color: #efedfa;
     transform: translateY(-2px);
   }
 }
 `;
+
 export const StyledList = styled.div`
   position: relative;
   list-style-type: none;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   justify-items: center;
   overflow-y: scroll;
-  height: 410px;
+  height: 500px;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 2rem;
 `;
 
 const StyledMyQuizAddButton = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap:2rem;
-  padding: 15px;
-
-  a {
-  overflow: scroll;
-  position:relative;
+ 
   scroll-behavior: smooth;
   transition: all 0.90s ease-in-out;
+  top:50px;
+ 
+  a { 
+  display: flex;
+  position:relative;
   justify-content: center;
   align-items: center;
-  width: 93%;
+  width:100%;
   max-height: 100px;
   background-color: #6A9AD6;
   border-radius: 0.5rem;
@@ -133,8 +136,8 @@ const StyledMyQuizAddButton = styled.div`
   box-shadow: 5px 5px 5px #AFC3D7;
   font-weight: 190;
   text-decoration: none;
-  top: 1rem;
-  margin-left: 6vw;
+  top:0rem;
+  margin-left: 2rem;
 
   &:hover {
     background-color: #35268c;
@@ -156,13 +159,13 @@ const StyledMyQuizAddButton = styled.div`
 }`;
 
 const StyledSubjectHeading = styled.h2`
-top:12rem;
-margin-left: 8rem;
+position: relative;
+top:0rem;
 text-align: center;
 font-size: 18px;
 font-weight: 250;
-position: fixed;
 background: #5DC1EB;
-z-index: 1;
-padding: 5px;
+padding:0px;
+position:center;
+flex-direction: column;
 `;

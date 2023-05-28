@@ -27,8 +27,7 @@ export default function TopicForm({ onTopicChange, topic, imageSrc} ) {
 };
 
 
-export const StyledTopicImage = styled.img`
-`;
+
 
 export const StyledFormLabel = styled.label`
   flex-direction:column;
@@ -45,6 +44,7 @@ export const StyledFormLabel = styled.label`
 `;
 
 export const option = styled.option`
-  background-color:  #d4d9ff ;`
+  background-color:  #d4d9ff ;
+`
 ;
 
