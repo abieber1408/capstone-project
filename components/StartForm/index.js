@@ -3,7 +3,7 @@ import LevelForm from "../LevelForm";
 //import PlayerNameForm from "../PlayerForm";
 import TopicForm from "../TopicForm";
 import VideoStream from "../VideoStream";
-import Heading from "../Heading/index";
+import Header from "../Heading/Header";
 import Footing from "../Footing";
 import React from "react";
 //import { StyledTopicImage } from "../TopicForm";
@@ -17,9 +17,9 @@ export function StartForm( { onTopicChange, imageSrc, onLevelChange, topic} ) {
     return (
         <>
             <Section>
-                <Heading>
+                <Header>
                     <h1>QUIZme</h1>
-                </Heading>
+                </Header>
                 
                 <VideoContainer>
                     <VideoStream topic={topic} />

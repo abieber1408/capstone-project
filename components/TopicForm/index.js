@@ -12,7 +12,7 @@ export default function TopicForm({ onTopicChange, topic, imageSrc} ) {
             <option value="art">Art</option>
             <option value="science">Science</option>
             <option value="chemistry">Chemistry</option>
-            <option value="environmental">Environmental</option>
+            <option value="environment">Environment</option>
             <option value="biology">Biology</option>
             <option value="journalism">Journalism</option>
             <option value="physics">Physics</option>

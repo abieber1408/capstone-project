@@ -1,4 +1,4 @@
-import Header from "./Heading/index";
+import Header from "./Heading/Header";
 import NavBar from "./NavBar/index";
 import styled from "styled-components";
 

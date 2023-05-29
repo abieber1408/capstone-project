@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 
-export default function Heading() {
+export default function Header() {
   return (
     <HeadingContainer>
-    
-      QUIZme
+    <Heading>
+        QUIZme
+        </Heading>
     </HeadingContainer>
   );
 }
@@ -46,3 +47,5 @@ export const HeadingContainer = styled.div`
   }
 `;
 
+const Heading = styled.h1`
+width: 100%`;
