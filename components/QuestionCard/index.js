@@ -6,8 +6,6 @@ import Image from "next/image";
 import useSWR from "swr";
 import NavBar from "../NavBar";
 
-
-
 export default function QuestionCard({ imageSrc, topic, level }) {
 const { data, isLoading } = useSWR("api/subjects");
   const [openId, setOpenId] = useState(null);
@@ -85,7 +83,7 @@ const { data, isLoading } = useSWR("api/subjects");
          </div>
         </ResultContainer>
        <div className="button" >
-          <ContinueButton text="Home" href="/" />
+          <ContinueButton text="Start" href="/" />
        </div>
      
         <StyledButtonGrid>

@@ -107,7 +107,7 @@ export const StyledList = styled.div`
   gap: 2rem;
   justify-items: center;
   overflow-y: scroll;
-  height: 500px;
+  height: 390px;
   width: 100%;
   flex-direction: column;
   flex-wrap: nowrap;

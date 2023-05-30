@@ -1,7 +1,7 @@
 import useSWR from "swr";
 //import { StyledButton } from "../AnswerQuestionCard/AnswerQuestion";
 import styled from "styled-components";
-import ContinueButton from "../Buttons";
+
 export default function SubjectForm() {
   const myquizes = useSWR("/api/myquizes");
 
@@ -40,7 +40,7 @@ export default function SubjectForm() {
       
       
       <StyledSubjectLabel htmlFor="topic">
-        My Name:
+         Name:
         <input type="text" id="name" name="name"  placeholder= "lowercase"/>
       </StyledSubjectLabel>
 
@@ -50,12 +50,12 @@ export default function SubjectForm() {
       </StyledSubjectLabel>
 
       <StyledSubjectLabel htmlFor="answer1">
-        Answer1:
+       Answer - correct:
         <input type="text" id="answer1" name="answer1" />
       </StyledSubjectLabel>
       
           <StyledSubjectLabel htmlFor="answer2">
-        Answer2:
+        Answer - false:
         <input type="text" id="answer2" name="answer2" />
       </StyledSubjectLabel>
       <StyledSubjectLabel htmlFor="correctAnswer">
@@ -72,7 +72,7 @@ export default function SubjectForm() {
 
 
 export const StyledSubjectForm = styled.form`
- padding: 15px;
+ padding: 10px;
  background: #4A86D4;
  font-weight: 100;
 `;
@@ -105,13 +105,13 @@ export const StyledAddButton = styled.button`
   justify-content: center;
   margin-left: 15px;
   align-items: center;
-  padding:15px;
+  padding:10px;
   width: 10%;
   max-height: 100px;
   background-color: #6A9AD6;
   color: #000000;
   
-  box-shadow: 0px 6px 8px #ffffff;
+  box-shadow: 0px 1px 2px #ffffff;
   border-radius: 10px;
   border:15px;
   font-size: 10px;

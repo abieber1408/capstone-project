@@ -16,7 +16,7 @@ export default function NavBar() {
         </li>
         <li>
           <StyledLink href="/">
-            HOME
+            Start
           </StyledLink>
         </li>
         <li>

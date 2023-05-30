@@ -1,4 +1,4 @@
-import styled from "styled-components";
+ import styled from "styled-components";
 
 export default function ContentCard({ children }) {
   return <StyledContainer>{children}</StyledContainer>;
@@ -14,8 +14,8 @@ const StyledContainer = styled.div`
   gap: 0.3em;
   flex-wrap: wrap;
   height: auto;
-  width: 100%;
+  width: 90%;
   margin-bottom:2rem;
-  padding:1em;
- 
+  padding:1rem; 
+  margin-left: 1rem;
 `;

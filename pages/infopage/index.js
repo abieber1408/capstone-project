@@ -1,6 +1,5 @@
 import Layout from "../../components/layout";
 import ContentCard from "../../components/ContentCard/index";
-
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -83,7 +82,7 @@ const StyledHeading = styled.h3`
 
 const StyledParagraph = styled.p`
   text-align: center;
-  margin: 1em;
+  margin:1rem;
   hyphens: auto;
   font-family: system-ui;
 `;
