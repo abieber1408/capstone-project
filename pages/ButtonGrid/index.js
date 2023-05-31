@@ -1,5 +1,4 @@
 import QuestionCard from "../../components/QuestionCard";
-import Quiz from "../../components/AnswerQuestionCard/AnswerQuestion";
 import NavBar from "../../components/NavBar";
 
 export default function ButtonGridExport({ topic, imageSrc, level }) {

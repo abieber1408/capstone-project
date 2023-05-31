@@ -27,15 +27,15 @@ Its simple design is suitable for any audience.</br>
 ## !!!  DEPLOYMENT  !!!</br>
 
 This app is serverless deployed via Vercel over MongoDB Atlas and has a database on Compass.
-
+</br>
   
 ## Getting Started
 
-Visit [Quizme app](https://capstone-project-1r8ujfocb-abieber1408.vercel.app/) and try it out!  It is recommended to use Chrome for optimal user experience.
+Visit [Quizme app](https://capstone-project-anitabieber.vercel.app/) and try it out!  It is recommended to use Chrome for optimal user experience.
 
 
 ## How to use QUIZme:
-</br>
+
 1- Select a Topic.</br>
 2- Start the video.</br>
 After watching it, select your level (level 1 is by defect).</br>
@@ -48,14 +48,14 @@ After watching it, select your level (level 1 is by defect).</br>
 
 You can see your Score: amount of correct answer from total.
 
-OR...
+or...
 
 Go to MyQuiz:</br>
 1- Enter your Data.</br>
-2- Start the quiz.
+2- Start your Quiz.
 
 ### !!!  ADVICE  !!!
 
-This App is under construction.
+This application is constantly updated and there may be changes in its functionality.
 
 

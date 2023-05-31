@@ -25,7 +25,6 @@ const { data, isLoading } = useSWR("api/subjects");
   const questionsToShow = questionIdsForTopic.slice(0, currentLevel * 4);
   const maxQuestions = questionsToShow.length;
 
-
   const handleButtonClick = (id) => {
     if (alreadyAnswered(id)) {
       // Cannot answer twice.
@@ -108,7 +107,6 @@ const StyledButtonGrid = styled.div`
     scroll-behavior: smooth;
     transition: all 0.90s ease-in-out;
     overflow: scroll;
-
   a {
     display: flex;
     justify-content: center;
@@ -126,21 +124,17 @@ const StyledButtonGrid = styled.div`
     margin-top: 20px;
     margin-left: 3vw;
     margin-bottom: 20px;
-
     &:hover {
       background-color: #35268c;
       color: #efedfa;
       transform: translateY(-2px);
     }
-
     &.question-not-answered {
       background-color: #6A9AD6;
     }
-
     &.answer-wrong {
       background-color: #FA7A66;
     }
-
     &.answer-correct {
       background-color: #3ED6D3;
     }
@@ -155,7 +149,6 @@ const ResultContainer = styled.div`
     height: 150px;
     background-color: #4A86D4;
     color: white;
-
   h1 {  
     background-color: #4A86D4;
     display: flex;
@@ -165,12 +158,10 @@ const ResultContainer = styled.div`
     width: 8%;
     font-weight: 100;
   }
-
   h2 {
     text-align: center;
     font-size: 10px
   }
-
  .topic {
     font-size: 40px;
     width: 33%;
@@ -178,7 +169,6 @@ const ResultContainer = styled.div`
     font-weight:800;
     text-shadow: 1px 1px #000000;
   }
-
   div.score {
     display: flex;
     width: 33%;

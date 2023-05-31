@@ -11,16 +11,13 @@ const Footing = styled.div`
   grid-area: footer;
   padding: 20px;
   gap:10px;
-
   div.column {
     width:40%;
     justify-content: center;
     display: flex;
   }
-
   div.grid {
     display: grid;
   }
-
 `;
 export default Footing;

@@ -11,22 +11,6 @@ export default function Header() {
   );
 }
 
-
-/*const HeadingContainer = styled.div`
-  background-color: var(--color-orange);
-  top: 0;
-  display: flex;
-  position: sticky;
-  z-index: 10;
-  height: 4em;
-  padding: 1rem;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  gap: 0.5em;
-  width: 100vw;
-`;*/
-
 export const HeadingContainer = styled.div`
   padding: 30px;
   width: 100%;
@@ -48,4 +32,4 @@ export const HeadingContainer = styled.div`
 `;
 
 const Heading = styled.h1`
-width: 100%`;
+  width: 100%`;

@@ -12,21 +12,13 @@ export default function LevelForm({onLevelChange, level}) {
 
   return (
     <StyledLevelLabel onSubmit={handleLevelSubmit} htmlFor="select-level">
-
       <select id="select-level" name="select-level" onChange={(event) =>   onLevelChange(event)} >
-          <option value={0}>Level:</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
+        <option value={0}>Level:</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
         <option value="4">4</option>
         <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-          <option value="10">10</option>
-          <option value="11">11</option>
-          <option value="12">12</option>
         onChange={(event) => setSelectedLevel(event.target.value)}
       </select>
      </StyledLevelLabel>
@@ -37,7 +29,6 @@ export const StyledLevelLabel = styled.label`
   flex-direction: column;
   font-weight: 100;
   height: 40px;
-
   select, option {
     border-radius: 0.1rem;
     font-size: 15px;

@@ -36,7 +36,6 @@ const topics = [
               <p>Create your owns with *My Quiz*</p>
             </>
         )}
-        
       </VideoStreamFieldset>
     );
   }
@@ -49,8 +48,7 @@ export const VideoStreamFieldset = styled.div`
     border-radius: 10px;
     overflow: hidden; 
     background-color:black;
-   color: grey;
-  
+    color: grey;
     margin: 10px;
     padding: 10px;
 `;

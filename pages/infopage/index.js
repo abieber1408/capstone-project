@@ -7,7 +7,6 @@ export default function InfoPage() {
   const [showInfo1, setShowInfo1] = useState(false);
   const [showInfo2, setShowInfo2] = useState(false);
 
-
   return (
     <Layout>
      
@@ -17,7 +16,6 @@ export default function InfoPage() {
       <ContentCard>
         <StyledSection>
           <HeadingContainer>
-           
             <StyledHeading onClick={() => setShowInfo1(!showInfo1)}>
               About QUIZme
             </StyledHeading>
@@ -34,7 +32,6 @@ export default function InfoPage() {
       <ContentCard>
         <StyledSection>
           <HeadingContainer>
-            
             <StyledHeading onClick={() => setShowInfo2(!showInfo2)}>
             How can you use QUIZme?
             </StyledHeading>

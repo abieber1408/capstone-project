@@ -39,12 +39,9 @@ export default function App({ Component, pageProps }) {
         <EnterScreen />
       ) : (
         <SWRConfig value={{ fetcher }}>
-     
           <Component {...pageProps} onLevelChange={handleLevelChange} level={level} onTopicChange={handleTopicChange} topic={topic} imageSrc={imageSrc} />
         </SWRConfig>
      )}
-    
     </>
- 
   );
 }

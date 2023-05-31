@@ -30,7 +30,6 @@ export const StyledLink = styled(Link)`
   float: right;
   margin-right: 4rem;
   z-index: 1;
-
   &:hover {
     color: #efedfa;
     transform: translateY(-2px);

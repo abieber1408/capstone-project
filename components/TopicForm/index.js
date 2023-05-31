@@ -26,15 +26,11 @@ export default function TopicForm({ onTopicChange, topic, imageSrc} ) {
     );
 };
 
-
-
-
 export const StyledFormLabel = styled.label`
   flex-direction:column;
   font-weight: 100;
   height: 40px;
   width: 35vw;
-
   select, option {
     border-radius: 0.1rem;
     font-size: 15px;
@@ -45,6 +41,5 @@ export const StyledFormLabel = styled.label`
 
 export const option = styled.option`
   background-color:  #d4d9ff ;
-`
-;
+`;
 

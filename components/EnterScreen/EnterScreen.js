@@ -27,7 +27,6 @@ const HeadingContainer = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0.9em;
- 
 `;
 
 const Heading = styled.h1`

@@ -1,10 +1,6 @@
 import styled from "styled-components";
 import Link from "next/link";
 
-import { faInfo } from "@fortawesome/free-solid-svg-icons";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { faGenderless } from "@fortawesome/free-solid-svg-icons";
-
 export default function NavBar() {
   return (
     <NavBarBox>

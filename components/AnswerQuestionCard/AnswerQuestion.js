@@ -1,13 +1,10 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-
 export default function Quiz ({data, id, onAnswered, onNext}) {
 
   const [showAnswer, setShowAnswer] = useState(false);
   const [userAnswer, setUserAnswer] = useState(null);
-  
-
 
   const handleAnswerClick = (answer) => {
     if (showAnswer) {
@@ -47,15 +44,15 @@ export default function Quiz ({data, id, onAnswered, onNext}) {
 );
 };
 export const StyledSection = styled.section`
-display: flex;
-  margin-top:0px;
-  margin-left: 1rem;
+  display: flex;
+  margin-top:0rem;
+  margin-left: 0rem;
   font-size:20px;
   flex-direction: column;
   h1 {
   font-size: 25px;
   margin: 25px;
-}
+  }
 `;
 
 export const AnswerContainer = styled.div`
@@ -69,7 +66,7 @@ export const AnswerContainer = styled.div`
   float: right;
   font-weight: 100;
   align-items: center;
-  max-height:   890px;
+  max-height: 4rem;
 `;
 
 export const ButtonNextQuestion = styled.button`
@@ -93,7 +90,6 @@ export const ButtonNextQuestion = styled.button`
   right: 4rem;
   z-index: 1;
   font-size: 10px;
-
   &:hover {
    color: #efedfa;
    transform: translateY(-2px);
