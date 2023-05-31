@@ -12,42 +12,50 @@ The experience of a digital environment makes it more attractive for the student
 
 Its simple design is suitable for any audience.</br>
 
-## To get it Started
 
-Install the dependencies and run the development server:
+## Features
+#### QUIZ:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+• False-Correct warning, and colored questions to indicate the immediate result.</br>
+• Scores for correct answered questions.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### MyQUIZ:
+  
+  •	Data Creator allows you to  enter your own data with preset form.</br>
 
 
+## !!!  DEPLOYMENT  !!!</br>
 
-### !!!  THIS PART IS UNDER CONSTRUCTION  !!!
+This app is serverless deployed via Vercel over MongoDB Atlas and has a database on Compass.
+</br>
+  
+## Getting Started
+
+Visit [Quizme app](https://capstone-project-anitabieber.vercel.app/) and try it out!  It is recommended to use Chrome for optimal user experience.
 
 
-//*[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/subjects](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/subjects.js`.
+## How to use QUIZme:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1- Select a Topic.</br>
+2- Start the video.</br>
+After watching it, select your level (level 1 is by defect).</br>
+3- Go to Quiz
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- You are now on the questions card:
 
-## Learn More
+4- Choose one question and answer it.</br>
+5- Select more questions to continue the quiz.</br>
 
-To learn more about Next.js, take a look at the following resources:
+You can see your Score: amount of correct answer from total.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+or...
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Go to MyQuiz:</br>
+1- Enter your Data.</br>
+2- Start your Quiz.
 
-## Deploy on Vercel
+### !!!  ADVICE  !!!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This application is constantly updated and there may be changes in its functionality.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.*//
+

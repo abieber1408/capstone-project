@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import { useState } from "react";
 import Quiz from "../AnswerQuestionCard/AnswerQuestion";
-import ContinueButton from "../ContinueButton";
+import ContinueButton from "../Buttons";
 import Image from "next/image";
 import useSWR from "swr";
+import NavBar from "../NavBar";
 
 export default function QuestionCard({ imageSrc, topic, level }) {
 const { data, isLoading } = useSWR("api/subjects");
@@ -23,7 +24,6 @@ const { data, isLoading } = useSWR("api/subjects");
   const questionIdsForTopic = questionIds.filter((id) => data[id].topic === topic);
   const questionsToShow = questionIdsForTopic.slice(0, currentLevel * 4);
   const maxQuestions = questionsToShow.length;
-
 
   const handleButtonClick = (id) => {
     if (alreadyAnswered(id)) {
@@ -79,11 +79,12 @@ const { data, isLoading } = useSWR("api/subjects");
             <h1>
               Score {score()}/{maxQuestions}
             </h1>
-          </div>
+         </div>
         </ResultContainer>
-        <div className="button">
-          <ContinueButton text="<" href="/" />
-        </div>
+       <div className="button" >
+          <ContinueButton text="Start" href="/" />
+       </div>
+     
         <StyledButtonGrid>
           {questionsToShow.map((id) => (
             <a className={"question " + questionClass(id)} key={id} onClick={() => handleButtonClick(id)}>
@@ -91,7 +92,8 @@ const { data, isLoading } = useSWR("api/subjects");
             </a>
           ))}
         </StyledButtonGrid>
-      </Section>
+     </Section>
+     <NavBar/>
     </>
   );
 }
@@ -105,7 +107,6 @@ const StyledButtonGrid = styled.div`
     scroll-behavior: smooth;
     transition: all 0.90s ease-in-out;
     overflow: scroll;
-
   a {
     display: flex;
     justify-content: center;
@@ -118,26 +119,22 @@ const StyledButtonGrid = styled.div`
     color: #333;
     font-size: 12px;
     box-shadow: 5px 5px 5px #AFC3D7;
-    font-weight: 300;
+    font-weight: 100;
     text-decoration: none;
     margin-top: 20px;
     margin-left: 3vw;
     margin-bottom: 20px;
-
     &:hover {
       background-color: #35268c;
       color: #efedfa;
       transform: translateY(-2px);
     }
-
     &.question-not-answered {
       background-color: #6A9AD6;
     }
-
     &.answer-wrong {
-      background-color: #FA7A66;;
+      background-color: #FA7A66;
     }
-
     &.answer-correct {
       background-color: #3ED6D3;
     }
@@ -152,7 +149,6 @@ const ResultContainer = styled.div`
     height: 150px;
     background-color: #4A86D4;
     color: white;
-
   h1 {  
     background-color: #4A86D4;
     display: flex;
@@ -162,20 +158,17 @@ const ResultContainer = styled.div`
     width: 8%;
     font-weight: 100;
   }
-
   h2 {
     text-align: center;
     font-size: 10px
   }
-
-  p.topic {
-    font-size: 30px;
-    margin-left: -100px;
-    margin-right: -100px;
+ .topic {
+    font-size: 40px;
     width: 33%;
     text-align: center;
+    font-weight:800;
+    text-shadow: 1px 1px #000000;
   }
-
   div.score {
     display: flex;
     width: 33%;
@@ -199,7 +192,7 @@ const Section = styled.div`
     flex-wrap: nowrap;
 
     div.button {
-    padding: 10px;
+    padding: 20px;
     text-align: right;
   }
 `;

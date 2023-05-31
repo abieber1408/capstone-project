@@ -7,12 +7,12 @@ export default function TopicForm({ onTopicChange, topic, imageSrc} ) {
         <StyledFormLabel>
             <select id="select-topic" name="select-topic" onChange={(event)=>onTopicChange(event)}>
             <option value="">Topic:</option>
-            <option value="chemistry">Chemistry</option>
+            <option value="astronomy">Astronomy</option>
             <option value="technology">Technology</option>
             <option value="art">Art</option>
             <option value="science">Science</option>
-            <option value="astronomy">Astronomy</option>
-            <option value="environmental">Environmental</option>
+            <option value="chemistry">Chemistry</option>
+            <option value="environment">Environment</option>
             <option value="biology">Biology</option>
             <option value="journalism">Journalism</option>
             <option value="physics">Physics</option>
@@ -26,16 +26,11 @@ export default function TopicForm({ onTopicChange, topic, imageSrc} ) {
     );
 };
 
-
-export const StyledTopicImage = styled.img`
-`;
-
 export const StyledFormLabel = styled.label`
   flex-direction:column;
   font-weight: 100;
   height: 40px;
   width: 35vw;
-
   select, option {
     border-radius: 0.1rem;
     font-size: 15px;
@@ -45,6 +40,6 @@ export const StyledFormLabel = styled.label`
 `;
 
 export const option = styled.option`
-  background-color:  #d4d9ff ;`
-;
+  background-color:  #d4d9ff ;
+`;
 

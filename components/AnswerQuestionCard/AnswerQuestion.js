@@ -1,14 +1,10 @@
-
 import { useState } from "react";
 import styled from "styled-components";
-
 
 export default function Quiz ({data, id, onAnswered, onNext}) {
 
   const [showAnswer, setShowAnswer] = useState(false);
   const [userAnswer, setUserAnswer] = useState(null);
-  
-
 
   const handleAnswerClick = (answer) => {
     if (showAnswer) {
@@ -24,7 +20,7 @@ export default function Quiz ({data, id, onAnswered, onNext}) {
   <StyledSection>
     {data && (
       <div>
-          <h1>{data.question}</h1><ButtonNextQuestion onClick={onNext}>+</ButtonNextQuestion>
+          <h1>{data.question}</h1><ButtonNextQuestion onClick={onNext}>Next Question</ButtonNextQuestion>
         <article>
           <StyledButton onClick={() => handleAnswerClick(data.answer1)}>
             {data.answer1}
@@ -44,26 +40,25 @@ export default function Quiz ({data, id, onAnswered, onNext}) {
         )}
       </div>
       )}
-      
-    
-    
   </StyledSection>
 );
 };
 export const StyledSection = styled.section`
-  margin-top:60px;
-  margin-left:0px;
+  display: flex;
+  margin-top:0rem;
+  margin-left: 0rem;
   font-size:20px;
+  flex-direction: column;
   h1 {
   font-size: 25px;
   margin: 25px;
-}
+  }
 `;
 
 export const AnswerContainer = styled.div`
   display: flex;
   padding:18px;
-  margin: 3rem;
+  margin: 2rem;
   margin-right:35vw;
   background-color: #85B4EB;
   width: 30%;
@@ -71,23 +66,33 @@ export const AnswerContainer = styled.div`
   float: right;
   font-weight: 100;
   align-items: center;
-  max-height:   890px;
+  max-height: 4rem;
 `;
 
 export const ButtonNextQuestion = styled.button`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-  max-height: 4rem;
-  background-color:#5DC1EB;
-  color: #efedfa;
-  font-size: 70px;
-  font-weight: 100;
-  cursor: w-resize;
-  margin-left: 18rem;
-  width: 10vw;
   border: none;
+  transition: all 0.90s ease-in-out;
+  width: 48px;
+  height: 48px;
+  padding: 8px;
+  border-radius: 50%;
+  background: #5DC1EB;
+  color: #000000;
+  font-weight: 190px;
+  box-shadow: 0px 6px 8px #ffffff;
+  text-decoration: none;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom:70px;
+  right: 4rem;
+  z-index: 1;
+  font-size: 10px;
+  &:hover {
+   color: #efedfa;
+   transform: translateY(-2px);
 `;
 
 export const StyledButton = styled.button`
@@ -101,6 +106,7 @@ export const StyledButton = styled.button`
   border-radius: 5px;
   color: #000000;
   font-size: 18px;
+  font-family: system-ui;
   font-weight: 200;
   cursor: help;
   margin-block:10px;
@@ -108,5 +114,4 @@ export const StyledButton = styled.button`
   border-radius: 20px;
   margin-left: 18px;
   border:10px
-
 `;

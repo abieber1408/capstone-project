@@ -27,12 +27,15 @@ const topics = [
             width="100%"
             height="120%"
             frameborder="0"
-            allowfullscreen
+            allowFullScreen
           />
         ) : (
-          <p>Please select a topic to see a video</p>
+            <>
+              <p>!Please select a topic to see a video!</p>
+              <p>You can go to the questions selecting *Quiz*</p>
+              <p>Create your owns with *My Quiz*</p>
+            </>
         )}
-        
       </VideoStreamFieldset>
     );
   }
@@ -45,6 +48,7 @@ export const VideoStreamFieldset = styled.div`
     border-radius: 10px;
     overflow: hidden; 
     background-color:black;
+    color: grey;
     margin: 10px;
     padding: 10px;
 `;
