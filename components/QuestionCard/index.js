@@ -19,7 +19,7 @@ const { data, isLoading } = useSWR("api/subjects");
   if (!data) {
     return;
   }
-
+  
   const questionIds = Object.keys(data);
   const questionIdsForTopic = questionIds.filter((id) => data[id].topic === topic);
   const questionsToShow = questionIdsForTopic.slice(0, currentLevel * 4);
@@ -168,6 +168,7 @@ const ResultContainer = styled.div`
     text-align: center;
     font-weight:800;
     text-shadow: 1px 1px #000000;
+    z-index: 1;
   }
   div.score {
     display: flex;

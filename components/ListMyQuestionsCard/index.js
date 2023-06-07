@@ -3,18 +3,14 @@ import { useState } from "react";
 import Quiz from "../AnswerQuestionCard/AnswerQuestion";
 import styled from "styled-components";
 import { StyledSubjectLabel } from "../SubjectForm";
-import ContinueButton from "../Buttons";
 import ContentCard from "../ContentCard";
-import { StyledButtonLink } from "../StartForm";
+import { StyledSubjectForm } from "../SubjectForm";
 
 export default function SubjectList() {
   const { data, isLoading } = useSWR("/api/myquizes");
   const [openId, setOpenId] = useState(null);
   const [answered, setAnswered] = useState([]);
-
-
   const [inputName, setInputName] = useState("");
-
 
   if (!data) return;
 
@@ -55,7 +51,6 @@ export default function SubjectList() {
     return questionIds.filter((id) => data[id].name === inputName);
   };
 
-
   const questionClass = (questionId) => {
     const answerState = answered.find((answer) => answer.id === questionId);
     if (answerState === undefined) {
@@ -63,28 +58,32 @@ export default function SubjectList() {
     }
     return answerState.correct ? "answer-correct" : "answer-wrong";
   };
-
-
-
-  
+    
   return (
-    <>
-      <StyledSubjectHeading>My Questions</StyledSubjectHeading>
-      <StyledButtonLink href="./ListMyQuestions">
-                       To LIST
-      </StyledButtonLink>
-      <ListSection>
-        <StyledList>
-            <StyledMyQuizAddButton id="top">
-              {questionIds.map((id) => (
-                <a className={"question " + questionClass(id)} key={id} onClick={() => handleButtonClick(id)}>
-                  {data[id].name} : {data[id].question}
-                </a>
-              ))}
-            </StyledMyQuizAddButton>
-        </StyledList>
-          <a href="#top" className="gototop">UP</a>
-      </ListSection>
+      <>
+          <StyledSubjectForm>
+         <StyledSubjectHeading>LIST <p>Answers and questions</p></StyledSubjectHeading>
+            <StyledSubjectLabel id="toplist">
+                 Name:
+             <input
+             type="text"
+             value={inputName}
+             onChange={(e) => setInputName(e.target.value)} 
+             />
+            </StyledSubjectLabel>
+          </StyledSubjectForm>
+          <ContentCard>
+            <StyledList id="list">
+                <p>List for {inputName}:</p>
+                {filterQuestionsByName().map((id) => (
+                 <a className={"question " + questionClass(id)}
+                     key={id} >
+                     {data[id].question}
+                        <p>{data[id].correctAnswer}</p>
+                 </a>
+                 ))}
+            </StyledList>
+      </ContentCard>
     </>
   );
 }
@@ -174,7 +173,7 @@ const StyledSubjectHeading = styled.h2`
   text-align: center;
   font-size: 18px;
   font-weight: 250;
-  background: #5DC1EB;
+  background: #4A86D4;
   padding:0px;
   position:center;
   flex-direction: column;

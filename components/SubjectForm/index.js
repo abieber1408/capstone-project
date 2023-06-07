@@ -32,23 +32,23 @@ export default function SubjectForm() {
       <StyledSubjectHeading>Create my Quiz</StyledSubjectHeading>
         <StyledSubjectLabel htmlFor="topic">
           Name:
-          <input type="text" id="name" name="name"  placeholder= "lowercase"/>
+          <input type="text" id="name" name="name"  required/>
         </StyledSubjectLabel>
         <StyledSubjectLabel htmlFor="question">
           Question:
-          <input type="text" id="question" name="question" />
+          <input type="text" id="question" name="question" required/>
         </StyledSubjectLabel>
         <StyledSubjectLabel htmlFor="answer1">
           Answer - correct:
-          <input type="text" id="answer1" name="answer1" />
+          <input type="text" id="answer1" name="answer1" required/>
         </StyledSubjectLabel>
         <StyledSubjectLabel htmlFor="answer2">
           Answer - false:
-          <input type="text" id="answer2" name="answer2" />
+          <input type="text" id="answer2" name="answer2" required/>
         </StyledSubjectLabel>
         <StyledSubjectLabel htmlFor="correctAnswer">
           Correct-Answer:
-          <input type="text" id="correctAnswer" name="correctAnswer" />
+          <input type="text" id="correctAnswer" name="correctAnswer"required/>
         </StyledSubjectLabel>
       <StyledAddButton type="submit">ADD</StyledAddButton>
     </StyledSubjectForm>
@@ -56,7 +56,7 @@ export default function SubjectForm() {
 }
 
 export const StyledSubjectForm = styled.form`
- padding: 10px;
+ padding: 20px;
  background: #4A86D4;
  font-weight: 100;
 `;
@@ -80,6 +80,7 @@ export const StyledSubjectLabel = styled.label`
   text-align: center;
   justify-content: end;
 }
+
 `;
 
 export const StyledAddButton = styled.button`

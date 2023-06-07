@@ -32,8 +32,8 @@ const topics = [
         ) : (
             <>
               <p>!Please select a topic to see a video!</p>
-              <p>You can go to the questions selecting *Quiz*</p>
-              <p>Create your owns with *My Quiz*</p>
+              <p>You can go to the questions selecting *Quiz* after selecting your preferred Topic</p>
+              <p>Create your own Quiz with *My Quiz*</p>
             </>
         )}
       </VideoStreamFieldset>
