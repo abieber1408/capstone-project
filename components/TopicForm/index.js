@@ -36,10 +36,12 @@ export const StyledFormLabel = styled.label`
     font-size: 15px;
     height: 30px;
     color: #6A9AD6;
+    z-index:1;
   }
 `;
 
 export const option = styled.option`
   background-color:  #d4d9ff ;
+  
 `;
 

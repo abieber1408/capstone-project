@@ -20,6 +20,7 @@ export default function NavBar() {
             MyQuiz
           </StyledLink>
         </li>
+     
       </NavBarList>
     </NavBarBox>
   );

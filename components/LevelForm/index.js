@@ -13,7 +13,7 @@ export default function LevelForm({onLevelChange, level}) {
   return (
     <StyledLevelLabel onSubmit={handleLevelSubmit} htmlFor="select-level">
       <select id="select-level" name="select-level" onChange={(event) =>   onLevelChange(event)} >
-        <option value={0}>Level:</option>
+        <option value="">Level:</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>

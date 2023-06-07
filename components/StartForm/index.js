@@ -8,7 +8,10 @@ import styled from "styled-components";
 import NavBar from "../NavBar";
 import Link from "next/link";
 
-export function StartForm( { onTopicChange, imageSrc, onLevelChange, topic} ) {
+export function StartForm({ onTopicChange, imageSrc, onLevelChange, topic }) {
+    
+    const isTopicSelected = topic !== "";
+
     return (
         <>
             <Section>
@@ -24,9 +27,13 @@ export function StartForm( { onTopicChange, imageSrc, onLevelChange, topic} ) {
                         <LevelForm onLevelChange={onLevelChange} />
                     </div>
                     <div className="column">
-                    <StyledButtonLink href="./ButtonGrid">
-                         Quiz
-                    </StyledButtonLink>
+                      {isTopicSelected ? (
+                     <StyledButtonLink href="./ButtonGrid">
+                       Quiz
+                     </StyledButtonLink>
+                     ) : (
+                     <StyledButtonLink href="#" disabled>Quiz</StyledButtonLink>
+                     )}                 
                     </div>
                 </Footing>
                 <NavBar /> 

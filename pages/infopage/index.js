@@ -9,9 +9,8 @@ export default function InfoPage() {
 
   return (
     <Layout>
-     
       <InfoText>
-      <h2>General Information</h2>
+       <h2>General Information</h2>
       </InfoText>
       <ContentCard>
         <StyledSection>
@@ -21,14 +20,15 @@ export default function InfoPage() {
             </StyledHeading>
           </HeadingContainer>
           {showInfo1 && (
-            <StyledParagraph>
-             QUIZme facilitates the study process through interaction with the information in a very simple way.
-              The consolidation of knowledge is given through text, and/or
-              audio and video.
-            </StyledParagraph>
+             <StyledParagraph>
+               QUIZme facilitates the study process through interaction with the information in a very simple way.
+               The consolidation of knowledge is given through text, and/or
+               audio and video.
+             </StyledParagraph>
           )}
         </StyledSection>
       </ContentCard>
+      
       <ContentCard>
         <StyledSection>
           <HeadingContainer>
@@ -39,15 +39,15 @@ export default function InfoPage() {
           {showInfo2 && (
             <>
               <StyledParagraph>
-              You can go to a preset quiz where you choose the topic you want to learn about.
+               You can go to a preset quiz where you choose the topic you want to learn about.
               </StyledParagraph>
               <StyledParagraph>
-              You can create your own quiz with the questions of your choice by entering it in a preset format.
+                You can create your own quiz with the questions of your choice by entering it in a preset format.
               </StyledParagraph>
               <StyledParagraph>
-              I wish you a lot of fun trying it out!
+                I wish you a lot of fun trying it out!
               </StyledParagraph>
-            </>
+           </>
           )}
         </StyledSection>
       </ContentCard>
@@ -79,7 +79,6 @@ const StyledHeading = styled.h3`
 
 const StyledParagraph = styled.p`
   text-align: center;
-  margin:1rem;
-  hyphens: auto;
+  margin:1em;
   font-family: system-ui;
 `;
