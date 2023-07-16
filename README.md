@@ -48,14 +48,16 @@ After watching it, select your level (level 1 is by defect).</br>
 
 You can see your Score: amount of correct answer from total.
 
-or...
+OR...
 
 Go to MyQuiz:</br>
 1- Enter your Data.</br>
 2- Start your Quiz.
 
+To generate a list of your questions and answers, click "To List".
+
 ### !!!  ADVICE  !!!
 
-This application is constantly updated and there may be changes in its functionality.
+This application is constantly being updated and there may be changes in its functionality.
 
 

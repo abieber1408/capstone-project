@@ -71,7 +71,7 @@ export default function SubjectList() {
     <>
       <StyledSubjectHeading>My Questions</StyledSubjectHeading>
       <StyledButtonLink href="./ListMyQuestions">
-                       To LIST
+                       To My List ➭
       </StyledButtonLink>
       <ListSection>
         <StyledList>

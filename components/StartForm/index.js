@@ -97,7 +97,7 @@ color: white;
  flex-direction: column;
  align-items: center;
  justify-content: center;
- margin-left: 2rem;
+ margin-left:0rem;
  text-shadow: 2px 1px #0a62f0;
 `;
 

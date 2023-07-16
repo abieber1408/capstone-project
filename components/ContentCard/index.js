@@ -18,4 +18,28 @@ const StyledContainer = styled.div`
   width: 90%;
   padding:1rem; 
   margin-left:1rem;
+
+  @media (min-width: 300px) {
+    margin-left:20px;
+    background-color: #E4F5F0;
+  }
+  @media (min-width: 400px) {
+    margin-left:20px;
+    background-color: #d9ffb8;
+  }
+  @media (min-width: 500px) {
+    margin-left:30px;
+    background-color: #b8ffc3;
+  }
+  @media (min-width: 700px) {
+    margin-left:40px;
+    background-color: #d7b8ff;
+  }
+  @media(min-width: 1000px) {
+    margin-left:55px;
+    background-color:#e5b8ff;
+  }
 `;
+
+
+
