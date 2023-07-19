@@ -89,14 +89,7 @@ export default function SubjectList() {
              onChange={(e) => setInputName(e.target.value)} 
              />
         </StyledSubjectLabel>
-        <StyledSubjectLabel>
-          Email:
-          <input
-            type="text"
-            value={emailAddress}
-            onChange={(e) => setEmailAddress(e.target.value)}
-          />
-        </StyledSubjectLabel>
+       
           </StyledSubjectForm>
           <ContentCard>
             <StyledList id="list">
@@ -109,7 +102,7 @@ export default function SubjectList() {
                  </a>
                  ))}
         </StyledList>
-        <button onSubmit={sendEmail}>send Email</button>
+       
       </ContentCard>
      
     </>

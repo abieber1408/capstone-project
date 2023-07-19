@@ -72,8 +72,7 @@ const HeadingContainer = styled.div`
 `;
 
 const StyledHeading = styled.h3`
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
   align-self: center;
 `;
 

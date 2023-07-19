@@ -75,7 +75,7 @@ export const StyledSubjectLabel = styled.label`
   margin-left: 15px;
 
  input {
-  displa: flex;
+  display: flex;
   allign-items: center;
   font-weight:100;
   text-align: center;
