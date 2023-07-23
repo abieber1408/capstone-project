@@ -5,8 +5,8 @@ import styled from "styled-components";
 import { StyledSubjectLabel } from "../SubjectForm";
 import ContentCard from "../ContentCard";
 import { StyledSubjectForm } from "../SubjectForm";
-import axios from "axios";
-import Contact from "../Contact";
+
+
 
 export default function SubjectList() {
   const { data, isLoading } = useSWR("/api/myquizes");
@@ -65,17 +65,6 @@ export default function SubjectList() {
     }
     return answerState.correct ? "answer-correct" : "answer-wrong";
   };
-  const sendEmail = async () => {
-    try {
-      const response = await axios.post("/api/sendEmail", {
-        content: data, // Pass the data you want to send in the email
-        email: emailAddress, // Include the email address in the request
-      });
-      console.log("Email sent successfully");
-    } catch (error) {
-      console.error("Failed to send email", error);
-    }
-  };
 
   return (
       <>
@@ -89,7 +78,6 @@ export default function SubjectList() {
              onChange={(e) => setInputName(e.target.value)} 
              />
         </StyledSubjectLabel>
-       
           </StyledSubjectForm>
           <ContentCard>
             <StyledList id="list">
@@ -102,9 +90,7 @@ export default function SubjectList() {
                  </a>
                  ))}
         </StyledList>
-       
       </ContentCard>
-     
     </>
   );
 }
