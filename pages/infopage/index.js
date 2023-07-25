@@ -56,6 +56,7 @@ export default function InfoPage() {
 }
 
 const InfoText = styled.p`
+  margin-top:3rem;
   text-align: center;
 `;
 
@@ -66,19 +67,19 @@ const StyledSection = styled.section`
 const HeadingContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  width: 100%;
+  width:  100%;
 `;
 
 const StyledHeading = styled.h3`
-  margin-left: auto;
-  margin-right: auto;
+margin-left: auto;
+margin-right: auto;
   align-self: center;
 `;
 
 const StyledParagraph = styled.p`
   text-align: center;
-  margin:1em;
+  margin:4rem;
   font-family: system-ui;
 `;

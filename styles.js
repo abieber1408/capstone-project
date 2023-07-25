@@ -14,6 +14,7 @@ export default createGlobalStyle`
     font-family: system-ui;
     place-items: center;
     background-color:#5DC1EB;
+
     
   }
 

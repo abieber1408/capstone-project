@@ -9,7 +9,7 @@ const topics = [
   { name: "technology", videoUrl: "https://www.youtube.com/embed/ZSiXZxVpVhs" },
   { name: "science", videoUrl: "https://www.youtube.com/embed/wstW5jy_WAU" },
   { name: "astronomy", videoUrl: "https://www.youtube.com/embed/libKVRa01L8" },
-  { name: "environmental", videoUrl: "https://www.youtube.com/embed/qHXQhrLr1Ok" },
+  { name: "environment", videoUrl: "https://www.youtube.com/embed/qHXQhrLr1Ok" },
   { name: "biology", videoUrl: "https://www.youtube.com/embed/ax0yjzbSBa4" },
   { name: "fish", videoUrl: "https://www.youtube.com/embed/cC9r0jHF-Fw" },
   { name: "sun", videoUrl: "https://www.youtube.com/embed/HFT7ATLQQx8" },

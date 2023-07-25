@@ -59,6 +59,7 @@ export const StyledSubjectForm = styled.form`
  padding: 20px;
  background: #4A86D4;
  font-weight: 100;
+
 `;
 
 export const StyledSubjectHeading = styled.h2`
@@ -73,14 +74,17 @@ export const StyledSubjectLabel = styled.label`
   font-weight: 190;
   width: 94%;
   margin-left: 15px;
+
  input {
-  displa: flex;
+  display: flex;
   allign-items: center;
   font-weight:100;
   text-align: center;
   justify-content: end;
+  border-radius: 0.4rem;
+  border-style: ridge;
+  border-color:#4A86D4;
 }
-
 `;
 
 export const StyledAddButton = styled.button`

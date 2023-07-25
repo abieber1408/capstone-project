@@ -6,11 +6,14 @@ import { StyledSubjectLabel } from "../SubjectForm";
 import ContentCard from "../ContentCard";
 import { StyledSubjectForm } from "../SubjectForm";
 
+
+
 export default function SubjectList() {
   const { data, isLoading } = useSWR("/api/myquizes");
   const [openId, setOpenId] = useState(null);
   const [answered, setAnswered] = useState([]);
   const [inputName, setInputName] = useState("");
+  const [emailAddress, setEmailAddress] = useState("");
 
   if (!data) return;
 
@@ -44,7 +47,11 @@ export default function SubjectList() {
   };
 
   if (openId !== null) {
-    return <Quiz data={data[openId]} id={openId} onAnswered={onAnswered} onNext={onNext} />;
+    return <Quiz
+      data={data[openId]}
+      id={openId}
+      onAnswered={onAnswered}
+      onNext={onNext} />;
   }
 
   const filterQuestionsByName = () => {
@@ -58,7 +65,7 @@ export default function SubjectList() {
     }
     return answerState.correct ? "answer-correct" : "answer-wrong";
   };
-    
+
   return (
       <>
           <StyledSubjectForm>
@@ -70,7 +77,7 @@ export default function SubjectList() {
              value={inputName}
              onChange={(e) => setInputName(e.target.value)} 
              />
-            </StyledSubjectLabel>
+        </StyledSubjectLabel>
           </StyledSubjectForm>
           <ContentCard>
             <StyledList id="list">
@@ -82,7 +89,7 @@ export default function SubjectList() {
                         <p>{data[id].correctAnswer}</p>
                  </a>
                  ))}
-            </StyledList>
+        </StyledList>
       </ContentCard>
     </>
   );
