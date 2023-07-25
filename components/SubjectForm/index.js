@@ -59,6 +59,7 @@ export const StyledSubjectForm = styled.form`
  padding: 20px;
  background: #4A86D4;
  font-weight: 100;
+
 `;
 
 export const StyledSubjectHeading = styled.h2`
@@ -84,7 +85,6 @@ export const StyledSubjectLabel = styled.label`
   border-style: ridge;
   border-color:#4A86D4;
 }
-
 `;
 
 export const StyledAddButton = styled.button`

@@ -71,11 +71,11 @@ export default function SubjectList() {
     <>
       <StyledSubjectHeading>My Questions</StyledSubjectHeading>
       <StyledButtonLink href="./ListMyQuestions">
-                       To My List ➭
+                      Create a list ➭
       </StyledButtonLink>
       <ListSection>
-        <StyledList>
-            <StyledMyQuizAddButton id="top">
+        <StyledList id="top">
+            <StyledMyQuizAddButton >
               {questionIds.map((id) => (
                 <a className={"question " + questionClass(id)} key={id} onClick={() => handleButtonClick(id)}>
                   {data[id].name} : {data[id].question}
@@ -137,6 +137,7 @@ const StyledMyQuizAddButton = styled.div`
   scroll-behavior: smooth;
   transition: all 0.90s ease-in-out;
   top:50px;
+ 
   a { 
   display: flex;
   position:relative;

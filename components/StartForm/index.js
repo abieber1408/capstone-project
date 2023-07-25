@@ -88,9 +88,9 @@ const CreateMyQuizButton = styled.button`
 `;
 
 export const StyledButtonLink= styled(Link)`
-color: white;
+color: #ffffff;
  text-decoration: none;
- font-size:30px;
+ font-size:25px;
  width: auto;
  font-weight:800;
  display: flex;
@@ -98,6 +98,6 @@ color: white;
  align-items: center;
  justify-content: center;
  margin-left:0rem;
- text-shadow: 2px 1px #0a62f0;
+ text-shadow: 1px 1px #020f63;
 `;
 

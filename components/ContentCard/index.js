@@ -7,18 +7,22 @@ export default function ContentCard({ children }) {
 const StyledContainer = styled.div`
   background-color: white;
   border-radius: 1.0em;
-  text-align: auto;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.3em;
   flex-wrap: wrap;
-  margin-top:2rem;
+  margin-top:3rem;
   height: auto;
   width: 90%;
   padding:1rem; 
-  margin-left:1rem;
+  margin-left:0rem;
 
+  @media (min-width: 250px) {
+    margin-left:15px;
+    background-color: #ffe3e3;
+  }
   @media (min-width: 300px) {
     margin-left:20px;
     background-color: #E4F5F0;
